@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>FORD LMS | 오프라인 강의</title>
+	<div id="header"></div>
+	<!-- css -->
+	<link rel="shortcut icon" href="../../assets/image/icon/Favicon/favi-cust16(2).ico">
+    <link rel="icon" href="../../assets/image/icon/Favicon/favi-cust16(2).ico">
+	
+    <!-- animation -->
+    <link rel="stylesheet" href="../../assets/lms/css/animate.css" />
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="../../assets/lms/css/bootstrap.min.css" />
+    <!-- et line icon --> 
+    <link rel="stylesheet" href="../../assets/lms/css/et-line-icons.css" />
+    <!-- font-awesome icon -->
+    <link rel="stylesheet" href="../../assets/lms/css/font-awesome.min.css" />
+    <!-- themify icon -->
+    <link rel="stylesheet" href="../../assets/lms/css/themify-icons.css">
+    <!-- swiper carousel -->
+    <link rel="stylesheet" href="../../assets/lms/css/swiper.min.css">
+    <!-- justified gallery  -->
+    <link rel="stylesheet" href="../../assets/lms/css/justified-gallery.min.css">
+    <!-- magnific popup -->
+    <link rel="stylesheet" href="../../assets/lms/css/magnific-popup.css" />
+    <!-- bootsnav -->
+    <link rel="stylesheet" href="../../assets/lms/css/bootsnav.css">
+    <!-- style -->
+    <link rel="stylesheet" href="../../assets/lms/css/style.css" />
+    <!-- responsive -->
+    <link rel="stylesheet" href="../../assets/lms/css/responsive.css" />
+    <!-- video css -->
+    <link rel="stylesheet" href="../../assets/lms/css/video-js.min.css" />
+	<link rel="stylesheet" href="../../assets/lms/css/videojs-resolution-switcher.css" />
+	
+	<!-- page custom css -->
+    <link rel="stylesheet" href="/file/lecture/${round.l_code}/css/test.css" />
+</head>
+<body>
+	<!-- section -->
+	<section style="padding: 0;">
+		<div style="background: #0678BC; /* padding: 16px 24px; */">
+			<ul class="breadcrumb" style="display: inline-block;/* padding-top: 3px */padding: 4px;margin: 10px 7px; background:none;">
+				<li style=""><span style="color: #fff;font-size: 12px;font-weight: 600;">HOME</span></li>
+				<li><span style="color: #fff;font-size: 12px;font-weight: 600;">온라인 강의</span></li>
+				<li><span style="color: #fff;font-size: 12px;font-weight: 600;">시험 응시</span></li>
+				<li><span style="color: #fff;font-size: 12px;font-weight: 600;">${detail.l_name}</span></li>
+			</ul>
+			<button type="button" class="pull-right" onclick="javascript:var win = window.open('','_self');win.close();return false;" style="width: 50px;/* margin-left: 5px; */border: 1px solid #fff;background: none;padding: 5px 4px;margin: 10px;color: #fff;font-size: 12px;font-weight: 600;">닫기</button>
+		</div>
+	</section>
+	
+	<section style="padding: 0; margin: 33px 0; padding: 0 51px; overflow: visible;">
+		<div style="width: 100%; /* height: 143px; */ background: #fff; border-top: 5px solid #8F8F8F; padding-bottom: 12px; box-shadow: -3px 3px 8px rgba(0, 0, 0, 0.16);">
+    		<h2 style=" text-align: center; margin-top: 21px; margin-bottom: 23px; font-size: 26px;">${detail.l_name}</h2>
+    		<h3 style=" text-align: center; margin-top: 21px; margin-bottom: 23px; font-size: 20px;">${detail.ls_title}</h3>
+    		<!-- <h5 style="text-align: center; font-weight: 600; font-size: 14px;"><i class="fa fa-edit" style="margin-right: 4px;color: #0678BC;"></i>설문기간 : <span>2020-02-01</span></h5> -->
+		</div>
+	</section>
+	
+	<section style="margin-top: 28px;padding: 0 51px;">
+		<div style="width: 100%; /* height: 500px; */ /* background: skyblue; */">
+			<div style=" padding-bottom: 17px; border-bottom: 2px dotted #787878; margin-bottom: 17px;">
+				<c:forEach items="${question}" var="i">
+				<h2 class="h5 font-weight-normal mb-xs mt-md question" style="margin-bottom: 22px;"><i class="fa fa-bookmark" style="color: #9B3B2C; margin-right: 5px;"></i>${i.sq_question}</h2>
+   				<div style="margin-left: 21px;">
+   					<c:forEach items="${answer}" var="j">
+   					<c:if test="${i.sq_idx eq j.sa_sq_idx}">
+   					<label class="containerBtn"> ${j.sa_answer}
+						<input type="radio" name="survey_${i.sq_idx}">
+						<span class="checkmark"></span>
+					</label>
+					</c:if>
+					</c:forEach>
+   				 </div>
+   				 </c:forEach>
+			</div>
+    	</div>
+  		<div style="margin: 50px 0 14px 0;">
+       		<p style="font-size: 13px;/* text-align: center; */">
+       			<span style="font-weight: 600;">※ 본 체크리스트는 여러분의 소중한 의견을 수렴하여 교육과정에 반영하는데 그 목적이 있으므로, 모든 문항에 빠짐없이 체크한 후 등록하여 주시기 바랍니다.</span>
+       		</p>
+			<button type="button" onclick="surveySubmit()" style="width: 101px;height: 46px;/* margin-left: 5px; */border: none;border-radius: 26px;background: #0678BC;margin: 27px 10px 10px 10px;color: #fff;font-size: 14px;font-weight: 600;float: right;">제출하기</button>
+		</div>
+	</section>
+	<!--//section -->
+	
+	<!-- javascript libraries -->
+	<script type="text/javascript" src="js/vendor/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/vendor/jquery.easing.1.3.js"></script>
+	<script type="text/javascript" src="js/vendor/imagesloaded.pkgd.min.js"></script>
+	<!-- slider -->
+	<script type="text/javascript" src="js/vendor/slick.js"></script>
+	<script type="text/javascript" src="js/vendor/jquery.bxslider.js"></script>
+	<!-- Customer JS -->	 
+	<script type="text/javascript" src="js/common.js"></script>	
+	<script type="text/javascript">
+		function surveySubmit() {
+			alert("시험 제출이 완료되었습니다");
+			self.close();
+		}
+	</script>
+</body>
+</html>

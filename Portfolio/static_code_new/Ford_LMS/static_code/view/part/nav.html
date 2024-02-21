@@ -1,0 +1,44 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>	
+	<!-- navigation -->
+	<nav class="position-relative">
+		<!-- gnb -->
+		<div class="navbar">
+			<div class="container" style="width:100%; padding-left:14px;">
+				<div class="row">
+					<div class="gnb-wrap clearfix">
+						<!-- <button type="button" class="gnb-btn sm-display-none" id="gnbBtnAll">all</button> -->
+						<button type="button" class="gnb-btn sm-display-none" id="gnbBtn">Menu</button>
+					</div>
+				</div>
+			</div>
+		</div>	
+		<!--// gnb -->
+		<!-- lnb -->
+		<div class="category-wrap container no-padding" onclick="Common.closeArea()">
+			<div class="row no-margin">
+				<div class="mo-utile-menu bg-red display-none sm-display-block">
+					<button type="button" onclick="Common.closeGnbBtn()" class="btn mo-close-btn">모바일 전체카테고리 닫기</button> 
+					<%-- <div class="padding-15px-tb">
+						<c:if test="${empty loginInfo}">
+						<a href="./login_form.do" class="text-white padding-20px-left"><i class="fa fa-lock"></i>&nbsp;&nbsp;로그인</a>
+						<a href="./member_form.do" class="text-white"><i class="fa fa-user"></i>&nbsp;&nbsp;회원가입</a>
+						</c:if>
+						<c:if test="${not empty loginInfo}">
+						<a href="./logout.do" class="text-white padding-20px-left"><i class="fa fa-unlock-alt"></i>&nbsp;&nbsp;로그아웃</a>
+						<a href="./my_rental.do" class="text-white"><i class="fa fa-user"></i>&nbsp;&nbsp;MY 렌탈</a>
+						</c:if>
+					</div> --%>
+				</div>			
+				<div class="category-sort position-relative" id="side_menu">
+					<script type="text/javascript">
+						$('#side_menu').load('sideMenu.ajax');
+					</script>
+				</div>		
+			</div>
+		</div>
+		<!--// lnb -->
+	</nav>	
+	<!--// navigation -->
+	

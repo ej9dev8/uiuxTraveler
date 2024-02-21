@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>바이온텍</title>
+	<div id="header"></div>
+	<!-- css -->
+	<link href="https://fonts.googleapis.com/css?family=Roboto%7cRubik:300,400" rel="stylesheet">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="../../assets/css/assets_css/theme-vendors.css">
+	<link rel="stylesheet" type="text/css" href="../../assets/css/assets_css/reset.css">
+	<link rel="stylesheet" type="text/css" href="../../assets/css/assets_css/theme.css">
+	<link rel="stylesheet" type="text/css" href="../../assets/css/vendor/fresco/css/fresco.css">
+	<link rel="stylesheet"  href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
+	<!-- js -->
+		<!-- Swiper JS -->		
+	<script type="text/javascript" src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+</head>
+<body>
+    <div id="wrap">
+        <main id="content" class="content">
+            <section id="wrap pageWrap">
+                <div class="product-detail-wrap">
+                    <div class="container">
+                        <div class="row">
+                            <div class="page-column-wrap col-xs-12">
+                                <!-- ================ 분리 section 1단 :: 상품 기본정보(이미지, 상품 정보) 영역  ================ -->
+                                <section class="detail-paging-info-content-wrap md-no-padding">
+                                    <div class="lqd-column">
+                                        <div class="ld-shop-topbar">
+                                            <nav class="mb-4 mb-md-0">
+                                                <ul class="breadcrumbs reset-ul inline-nav comma-sep-li">
+                                                    <li class="fa"><a href="index.do">HOME</a></li>
+                                                    <li class="fa"><a href="">이온수기</a></li>
+                                                </ul>
+                                            </nav>
+                                        </div>
+                                        <div class="product">
+                                            <!-- 상품 이미지 정보 영역 -->
+                                            <div class="col-md-4 col-xs-12"> 
+                                                <div class="images">
+                                                    <figure>
+                                                        <img src="https://cdn-pro-web-151-224.cdn-nhncommerce.com/biontech_godomall_com/data/goods/20/05/22/1000000002/1000000002_detail_023.png">
+                                                    </figure>
+                                                </div>
+                                            </div> 
+                                            <!-- // 상품 이미지 정보 영역 -->
+            
+                                            <!-- 상품 정보 영역 -->
+                                            <div class="col-md-7 col-xs-12">
+                                                <!-- (1단) : 타이틀 -->
+                                                <div class="shop-product__title">
+                                                    <h4 class="product_title entry-title float-left no-margin">바이온텍 알칼리 이온수기 BTM-207E/H2</h4>
+                                                </div>
+                                                <!-- // (1단) : 타이틀 -->
+                                                
+                                                
+                                                <!-- (2단) : 상품 정보   -->
+                                                <div class="padding-20px-all margin-20px-top bg-very-light-gray border-all border-color-medium-gray">
+                                                    <h6 class="margin-20px-bottom no-margin-top text-center text-main">판매정보</h6>
+                                                    <div class="shop-product__price price_two_col"><!-- 1열인 경우 price_two_col 클래스 삭제 -->
+                                                                <table class="width-100 border-none">
+                                                            <tbody>
+                                                                <tr class="product_info_content_box">
+                                                                    <th class="price_title">소비자가</th>
+                                                                    <td class="price_info">2,190,000<span class="cost-won">원</span></td></tr>
+                                                                <tr class="product_info_content_box">
+                                                                    <th class="price_title">판매가</th>
+                                                                    <td class="price_info">2,190,000<span class="cost-won">원</span></td>
+                                                                </tr>
+                                                                <tr class="product_info_content_box">
+                                                                    <th class="price_title delv-price">배송비</th>
+                                                                    <td class="price_info">무료<span class="cost-won">(수소수기,미스트기,전해수기,필터 해당)</span></td>
+                                                                </tr>
+                                                                <tr class="product_info_content_box milg">
+                                                                    <th class="price_title">마일리지</th>
+                                                                    <td class="price_info">43,800<span class="cost-won">원</span></td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    
+                                                        
+                                                    </div>
+                                                    
+                                                
+                                                    <!-- // (2단) : 상품 정보 -->
+                                                
+                                                    <!-- (3단) : 상품 선택 및 가격 표시 -->
+                                                    <div class="shop-product__option">
+                                                        <div class="product_info_content_box"> <!-- select (2) : 색상 / 상품 선택 수량 표시 -->
+                                                            <input type="hidden" id="price" value="">
+                                                            <div class="price_info product_quick_view bg-view row">
+                                                                <div class="col-xs-4 quick_content_wrap no-padding">
+                                                                    <div class="display-inline-block float-left">
+                                                                        <p class="quantity-counter float-left display-inline-flex width-130px no-margin">
+                                                                            <a class="quan-btn minus" onclick="Product.addCnt('minus')"><span class="count-icon fa fa-minus"></span></a>
+                                                                            <input class="border-none no-padding text-center" type="text" id="cnt" value="1" readonly="">
+                                                                            <a class="quan-btn plus" onclick="Product.addCnt('plus')"><span class="count-icon fa fa-plus"></span></a>
+                                                                        </p>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-xs-4"><h6 class="no-margin text-center">합계</h6></div>
+                                                                <div class="col-xs-4 no-padding"><h6 id="sell_price" class="sell_price quick_product_price display-inline-block no-margin">2,190,000<span class="cost-won line-height-22">원</span></h6></div>
+                                                            </div>
+                                                            
+                                                        </div> <!-- // select (2) : 색상 / 상품 선택 수량 표시 -->
+                                                        <div class="product_total_content">
+                                                            <div class="product-form-submit-btn">
+                                                                <div class="product-form-submit-btn width-100"> <!-- 제출버튼 -->
+                                                                    <div class="row no-margin submit-btn-content">
+                                                                           <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 main-btn first-btn xs-no-padding-right no-padding-top"><button type="button" onclick="">장바구니</button></div>
+                                                                        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 main-btn second-btn xs-no-padding-left no-margin-top"><button type="button" onclick="">결제하기</button></div>
+                                                                    </div>
+                                                                </div><!-- // 제출버튼 -->
+                                                            </div>
+                                                        <!-- (3단) : 상품 선택 및 가격 표시 -->
+                                                    </div>
+                                                    
+                                                    
+                                                    
+                                                    
+                                                <!-- // 상품 정보 영역 -->
+                                            </div>
+                                            
+                                            
+                                        <!-- /.product -->
+                                                </div>
+                                                <div class="padding-20px-all margin-20px-top bg-very-light-gray border-all border-color-medium-gray">
+                                                    <h6 class="margin-20px-bottom no-margin-top text-center text-main">렌탈정보</h6>
+                                                    <div class="shop-product__price price_two_col"><!-- 1열인 경우 price_two_col 클래스 삭제 -->
+                                                        <table class="width-100 border-none">
+                                                            <tbody>
+                                                                <tr class="product_info_content_box">
+                                                                    <th class="price_title">월렌탈료</th>
+                                                                    <td class="price_info" id="pro_rental">38,900<span class="cost-won">원</span></td>
+                                                                </tr>
+                                                                <tr class="product_info_content_box">
+                                                                    <th class="price_title">총렌탈료</th>
+                                                                    <td class="price_info" id="totalRental">2,190,000<span class="cost-won">원</span></td>
+                                                                </tr>
+                                                                <tr class="product_info_content_box">
+                                                                    <th class="price_title">배송/설치비용</th>
+                                                                    <td class="price_info">무료<span class="cost-won">(수소수기,미스트기,전해수기,필터 해당)</span></td>
+                                                                </tr>
+                                                                <tr class="product_info_content_box rental-day">
+                                                                    <th class="price_title line-height-43">렌탈기간</th>
+                                                                    <td class="price_info">
+                                                                        <span class="select-span position-relative">
+                                                                            <select name="pro_idx" id="pro_idx" class="select-small height-42px" onchange="rentalSelect()">
+                                                                                <option disabled="" selected="">기간선택</option>
+                                                                                    <option value="3mth">3개월</option>
+                                                                                    <option value="6mth">6개월</option>
+                                                                                    <option value="12mth">12개월</option>
+                                                                                    <option value="24mth">24개월</option>
+                                                                                    <option value="30mth">30개월</option>
+                                                                                    <option value="60mth">60개월</option>
+                                                                            </select>
+                                                                            <span class="select-icon fa fa-angle-down"></span>
+                                                                        </span>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    
+                                                        
+                                                        
+                                                        
+                                                    <!-- (3단) : 상품 선택 및 가격 표시 -->
+                                                    <div class="shop-product__option">
+                                                           <div class="product_info_content_box"> <!-- select (2) : 색상 / 상품 선택 수량 표시 -->
+                                                               
+                                                            
+                                                            <!-- 상품 배송비 계산  -->
+                                                            <!-- //상품 배송비 계산  -->
+                                                            </div>
+                                                           </div> <!-- // select (2) : 색상 / 상품 선택 수량 표시 -->
+                                                           <div class="product_total_content">
+                                                               <div class="product-form-submit-btn">
+                                                                <div class="product-form-submit-btn width-100"> <!-- 제출버튼 -->
+                                                                    <div class="row no-margin submit-btn-content">
+                                                                           <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 sub-btn first-btn xs-no-padding-right no-padding-top"><button type="button" onclick="sangdam()">상담신청</button></div>
+                                                                        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 sub-btn second-btn xs-no-padding-left no-margin-top"><button type="button" onclick="rental()">렌탈신청</button></div>
+                                                                    </div>
+                                                                </div><!-- // 제출버튼 -->
+                                                            </div>
+                                                        <!-- (3단) : 상품 선택 및 가격 표시 -->
+                                                    </div>
+                                                </div>
+                                                <!-- // 상품 정보 영역 -->
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                                <!-- ================ // 분리 section 1단 :: 상품 기본정보(이미지, 상품 정보) 영역  ================ -->
+                            </div>
+                            
+                            <div class="page-column-wrap col-xs-12">
+                                   <!-- ================ 분리 section 2단 :: 상품 상세정보 영역  ================ -->
+                                   <section id="pageDivision" class="detail-paging-expl-content-wrap">
+                                       <!-- tab 버튼 영역 -->
+                                    <div class="shop--element-nav-tabs"> 
+                                        <div class="woocommerce-tabs shop-tabs-style tabs-value-five wc-tabs-wrapper">
+                                            <div class="tabs wc-tabs">	
+                                                <div class="tab-content-wrap">
+                                                    <ul class="tabs-nav" role="tablist">
+                                                        <li class="description_tab active" id="tab-title-description">
+                                                            <a role="tab" data-toggle="tab" href="#tab-description">상품 상세</a>
+                                                        </li>
+                                                        <li class="additional_information_tab" id="tab-title-additiona-subA">
+                                                            <a role="tab" data-toggle="tab" href="#tab-additiona-subA">구매 안내</a>
+                                                        </li>
+                                                        <li class="reviews_tab" id="tab-title-additiona-subB">
+                                                            <a role="tab" data-toggle="tab" href="#tab-additiona-subB">상품 후기</a>
+                                                        </li>
+                                                        <li class="reviews_tab" id="tab-title-additiona-subC">
+                                                            <a role="tab" data-toggle="tab" href="#tab-additiona-subC">상품 Q&A</a>
+                                                        </li>
+                                                        <li class="reviews_tab" id="tab-title-additiona-subD">
+                                                            <a role="tab" data-toggle="tab" href="#tab-additiona-subD">관련 상품</a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>		
+                                    </div> 
+                                    <!-- // tab 버튼 영역 -->		
+                                            
+                                    <div class="shop--element-product-list">
+                                        <div class="tabs-content">
+                                            <!-- 1. 탭(상품 상세 정보) 본문 -->
+                                            <div class="tabs-pane fade active in" id="tab-description"> 
+                                                <!-- 탭 내부 본문 setction -->
+                                                <section class="tab-conent-division-wrap product-detail-content">
+                                                    <p class="width-80 md-width-100 xs-width-90 margin-auto">
+                                                        <img src="https://cdn-pro-web-151-224.cdn-nhncommerce.com/biontech_godomall_com/data/editor/goods/230417/ea0c7cd799610fa92aef43f9145cd912_173156.png" alt="제품상세이미지">
+                                                    </p>
+                                                </section>
+                                                <!-- // 탭 내부 본문 setction -->
+                                            </div>
+                                            <!-- // 1. 탭(상품 상세 정보) 본문 -->
+                                                            
+                                            <!-- 2. 탭(상품 구매 안내) 본문 -->
+                                            <div class="tabs-pane fade" id="tab-additiona-subA"> 
+                                                <!-- 탭 내부 본문 setction -->
+                                                <section class="tab-conent-division-wrap">
+                                                        <div class="guide-content"> <!-- 상품 구매 안내 콘텐츠 2 : 배송정보 -->
+                                                            <div class="row">
+                                                                <div class="col-lg-3 guide-title"><p>배송정보</p></div>
+                                                                <div class="col-lg-9 guide-text">
+                                                                    <ul>
+                                                                        <li>· 배송방법 : 한진택배(1588-0011), 설치기사 방문</li>
+                                                                        <li>· 배송지역 : 전국</li>
+                                                                        <li>· 배송비 : 무료(미스트기, 수소수기, 전해수기), 이온수기, 전기레인지, 공기청정기, 비데, 정품필터 제품 첫 설치시 무상설치</li>
+                                                                        <li>· 본 상품의 평균 배송일은 1~3일입니다.(입금 확인 후) 설치 상품의 경우 다소 늦어질수 있습니다.[배송예정일은 주문시점(주문순서)에 따른 유동성이 발생하므로 평균 배송일과는 차이가 발생할 수 있습니다.]</li>
+                                                                        <li>· 배송방법 : 한진택배(1588-0011), 설치기사 방문</li>
+                                                                        <li>· 배송지역 : 전국</li>
+                                                                        <li>· 배송비 : 무료(미스트기, 수소수기, 전해수기), 이온수기, 전기레인지, 공기청정기, 비데, 정품필터 제품 첫 설치시 무상설치</li>
+                                                                        <li>· 본 상품의 평균 배송일은 1~3일입니다.(입금 확인 후) 설치 상품의 경우 다소 늦어질수 있습니다.[배송예정일은 주문시점(주문순서)에 따른 유동성이 발생하므로 평균 배송일과는 차이가 발생할 수 있습니다.]</li>
+                                                                    </ul>
+                                                            </div>
+                                                            </div>
+                                                        </div> <!-- // 상품 구매 안내 콘텐츠 2 : 배송정보 -->
+                                                        <div class="guide-content"> <!-- 상품 구매 안내 콘텐츠 3 : 교환 및 반품정보 -->
+                                                            <div class="row">
+                                                                <div class="col-lg-3 guide-title"><p>교환 및 반품정보</p></div>
+                                                                <div class="col-lg-9 guide-text">
+                                                                    <ul>
+                                                                        <li>· 상품 택(tag)제거 또는 개봉으로 상품 가치 훼손 시에는 상품수령후 7일 이내라도 교환 및 반품이 불가능합니다.</li>
+                                                                        <li>· 고객 변심에 의한 교환, 반품은 고객께서 배송비를 부담하셔야 합니다(제품의 하자,배송오류는 제외)</li>
+                                                                        <li>· 일부 상품은 신모델 출시, 부품가격 변동 등 제조사 사정으로 가격이 변동될 수 있습니다.</li>
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+                                                        </div> <!-- // 상품 구매 안내 콘텐츠 3 : 교환 및 반품정보 -->
+                                                        <div class="guide-content"> <!-- 상품 구매 안내 콘텐츠 4 : AS 안내 -->
+                                                            <div class="row">
+                                                                <div class="col-lg-3 guide-title"><p>AS 안내</p></div>
+                                                                <div class="col-lg-9 guide-text">
+                                                                    <ul>
+                                                                        <li>· 소비자분쟁해결 기준(공정거래위원회 고시)에 따라 피해를 보상받을 수 있습니다.</li>
+                                                                        <li>· A/S는 판매자에게 문의하시기 바랍니다.</li>
+                                                                        <li>· 이온수기, 공기청정기, 비데, 전기레인지 : 일시불 구입 시, 무상 서비스 1년이 포함됩니다.</li>
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+                                                        </div> <!-- // 상품 구매 안내 콘텐츠 4 : 서비스 문의 -->
+                                                        <!-- 추가 고시정보 -->
+                                                        <div class="guide-content">
+                                                            <div class="row">
+                                                                <div class="col-lg-3 guide-title"><p>환불안내</p></div>
+                                                                <div class="col-lg-9 guide-text">
+                                                                    <ul>
+                                                                        <li>· 상품 청약철회 가능기간은 상품 수령일로 부터 7일 이내 입니다.</li>
+                                                                        <li>· 반품비용 : 왕복 택배비 5000원 부담.(택배발송 상품에 한함)</li>
+                                                                        <li>· 제품에 불량이 있을 경우, 바이온텍 공식몰 고객센터로 문의주시면 친절하게 교환/반품 접수 진행을 도와드리겠습니다. (1899-9336)</li>
+                                                                        <li>· 설치일로부터 14일 이내 반환 시 설치,철거,필터 비용을 납부하여야 합니다.
+                                                                            단.전기레인지 : 상판비용,설치,철거 비용을 납부하여야 합니다.</li>
+                                                                        <li>· 렌탈 기간 동안 고객의 책임 없는 사유로 상품의 고장·훼손 시 무상으로 수리 및 부품 교환을 해 드립니다.
+                                                                            단, 소비자의 귀책으로 인한 경우는 수리비 및 부품 교환 비용을 소비자가 부담해야 합니다.</li>
+                                                                        <li>· 렌탈 제품의 의무사용기간은 5년이며, 중도해약 시 위약금으로 발생합니다.</li>
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+                                                        </div>	
+                                                </section>
+                                                <!-- // 탭 내부 본문 setction -->
+                                            </div>
+                                            
+                                            <!-- 3. 탭(상품 후기) 본문 -->
+                                            <div class="tabs-pane fade" id="tab-additiona-subB">
+                                                <section class="tab-conent-division-wrap">
+                                                    <h5 class="text-extra-large font-weight-600 no-margin">상품 사용 후기</h5>
+                                                    <input type="hidden" id="page1" value="${page1 }">
+                                                    
+                                                    <!-- 게시판 영역 -->
+                                                    <table class="table basic_table_element product-board-table xs_table_block margin-30px-tb">
+                                                        <thead class="xs-display-none">
+                                                            <tr>
+                                                                <th style="width: 100px">번호</th>
+                                                                <th style="width: 120px">이미지</th>
+                                                                 <!-- 추가 -->
+                                                                <th style="width: auto">제목</th>
+                                                                <th style="width: 150px">작성자</th>
+                                                                <th style="width: 120px">작성일</th>
+                                                                <th style="width: 120px">조회</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td class="xs-display-none"><a><span>1</span></a></td>
+                                                                <td class="xs-display-none">
+                                                                    <img src="https://www.bion-techmall.com/data/board/upload/goodsreview/2e64ca587dcc11ed" alt="상품 사용 후기 이미지">
+                                                                </td>
+                                                                    
+                                                                <td class="">
+                                                                    <p class="text-khaki"><a onclick="location.href='reviewView.do?rb_idx=${i.rb_idx}'"><b>이온수기사용후기</b></a></p>
+                                                                    <div class="display-none xs-display-block text-extra-small margin-5px-top">
+                                                                        <a><span class="text-gray padding-10px-right">${fn:substring(i.rb_date,0,10) }</span></a>
+                                                                    </div>
+                                                                </td>
+                                                                <td class="xs-display-none"><span>최광순</span></td>
+                                                                <td class="xs-display-none"><span>2021.03.08</span></td>
+                                                                <td class="xs-display-none"><span>53</span></td>
+                                                                </tr>
+
+                                                                <tr>
+                                                                    <td class="xs-display-none"><a><span>2</span></a></td>
+                                                                    <td class="xs-display-none">
+                                                                    </td>
+                                                                    <td class="">
+                                                                        <p class="text-khaki"><a onclick="location.href='reviewView.do?rb_idx=${i.rb_idx}'"><b>알칼리 이온수기 BTM-207E/H2</b></a></p>
+                                                                        <div class="display-none xs-display-block text-extra-small margin-5px-top">
+                                                                            <a><span class="text-gray padding-10px-right">${fn:substring(i.rb_date,0,10) }</span></a>
+                                                                        </div>
+                                                                    </td>
+                                                                    <td class="xs-display-none"><span>apxnrl</span></td>
+                                                                    <td class="xs-display-none"><span>2021.03.08</span></td>
+                                                                    <td class="xs-display-none"><span>33</span></td>
+                                                                </tr>
+
+                                                                <tr>
+                                                                    <td class="xs-display-none"><a><span>3</span></a></td>
+                                                                    <td class="xs-display-none">
+                                                                    
+                                                                    <img src="https://www.bion-techmall.com/data/board/upload/goodsreview/2df733495bfdd69d" alt="상품 사용 후기 이미지">
+                                                                    </td>
+                                                                    <td class="">
+                                                                        <p class="text-khaki"><a onclick="location.href='reviewView.do?rb_idx=${i.rb_idx}'"><b>	정수기 바이온텍으로 바꾸고 너무 만족합니다</b></a></p>
+                                                                        <div class="display-none xs-display-block text-extra-small margin-5px-top">
+                                                                            <a><span class="text-gray padding-10px-right">${fn:substring(i.rb_date,0,10) }</span></a>
+                                                                        </div>
+                                                                    </td>
+                                                                    <td class="xs-display-none"><span>nanchou</span></td>
+                                                                    <td class="xs-display-none"><span>2021.03.28</span></td>
+                                                                    <td class="xs-display-none"><span>8</span></td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="xs-display-none"><a><span>4</span></a></td>
+                                                                    <td class="xs-display-none">
+                                                                    </td>
+                                                                    <td class="">
+                                                                        <p class="text-khaki"><a onclick="location.href='reviewView.do?rb_idx=${i.rb_idx}'"><b>필터교체가 편하고 좋아요</b></a></p>
+                                                                        <div class="display-none xs-display-block text-extra-small margin-5px-top">
+                                                                            <a><span class="text-gray padding-10px-right">${fn:substring(i.rb_date,0,10) }</span></a>
+                                                                        </div>
+                                                                    </td>
+                                                                    <td class="xs-display-none"><span>tailteail</span></td>
+                                                                    <td class="xs-display-none"><span>2021.06.28</span></td>
+                                                                    <td class="xs-display-none"><span>53</span></td>
+                                                                </tr>
+                                                            </tbody>
+                                                    </table>	
+                                                    <!-- 게시판 버튼 영역 -->
+                                                    <div class="board-table-btn-wrap margin-30px-bottom"> 
+                                                        <div class="board-table-btn float-right">
+                                                            <div class="main-btn display-inline-block"><button type="button" onclick="reviewWrite();" class="width-100">작성하기</button></div>
+                                                         </div>
+                                                    </div> 
+                                                    <!-- // 게시판 버튼 영역 -->
+                                                    
+                                                    <!-- 게시판 페이지 버튼(pagination) 영역 -->
+                                                    <div class="pagination"> 
+                                                        <a class="arrow" id="prevAll" onclick=""><i class="fa fa-angle-double-left"></i></a>
+                                                        <a class="arrow" id="prev" onclick=""><i class="fa fa-angle-left"></i></a>
+                                                        <a class="on">1</a>
+                                                        <a onclick="">2</a>
+                                                        <a class="arrow" id="next" onclick=""><i class="fa fa-angle-right"></i></a>
+                                                        <a class="arrow" id="nextAll" onclick=""><i class="fa fa-angle-double-right"></i></a>
+                                                    </div>
+                                                    <!-- // 게시판 페이지 버튼(pagination) 영역 -->
+                                                    <!-- // 게시판 영역 -->
+                                                </section>
+                                            </div>
+                                        
+                                            <!-- // 3. 탭(상품 후기) 본문 -->
+                                            
+                                            <!-- 4. 탭(상품 Q&A) 본문 -->
+                                            <div class="tabs-pane fade" id="tab-additiona-subC">
+                                                <section class="tab-conent-division-wrap">
+                                                    <h5 class="text-extra-large font-weight-600 no-margin">상품 Q&A</h5>
+                                                    <input type="hidden" id="page2" value="${page2 }">
+                                                    
+                                                    <!-- 게시판 영역 -->
+                                                    <table class="table basic_table_element product-board-table xs_table_block margin-30px-tb">
+                                                        <thead class="xs-display-none">
+                                                            <tr>
+                                                                <th style="width: 100px">번호</th>
+                                                                <th style="width: 150px">카테고리</th>
+                                                                <th style="width: auto">제목</th>
+                                                                <th style="width: 120px">작성자</th>
+                                                                <th style="width: 120px">작성일</th>
+                                                                <th style="width: 100px">조회</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td class="xs-display-none"><a><span>1</span></a></td>
+                                                                <td class=""><a><span>교환/반품</span></a></td>
+                                                                <td class="">
+                                                                    <p><a class="text-cut" onclick=""><b>상품문의</b> <i class="fa fa-lock text-gray ml-1"></i></a></p>
+                                                                    <div class="display-none xs-display-block text-extra-small margin-5px-top">
+                                                                        <a><span class="text-gray padding-10px-right">${fn:substring(i.m_name,0,1) }**</span></a>
+                                                                        <a><span class="text-gray padding-10px-right">${fn:substring(i.qb_date,0,10) }</span></a>
+                                                                    </div>
+                                                                </td>
+                                                                <td class="xs-display-none"><span>dno283</span></td>
+                                                                <td class="xs-display-none"><span>2022.08.11</span></td>
+                                                                <td class="xs-display-none"><span>2</span></td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                    <!-- 게시판 버튼 -->
+                                                    <div class="board-table-btn-wrap margin-30px-bottom"> 
+                                                        <div class="board-table-btn float-right">
+                                                            <div class="sub-btn display-inline-block margin-10px-right"><button type="button" class="width-100" onclick="location.href='qnaList.do'">전체보기</button></div>
+                                                            <div class="main-btn display-inline-block"><button type="button" class="width-100" onclick="qnaWrite();">작성하기</button></div>
+                                                         </div>
+                                                    </div> 
+                                                    <!-- // 게시판 버튼 영역 -->
+                                                    
+                                                    <!-- 게시판 페이지 버튼(pagination) 영역 -->
+                                                    <div class="pagination"> 
+                                                        <a class="arrow" id="prevAll" onclick=""><i class="fa fa-angle-double-left"></i></a>
+                                                        <a class="arrow" id="prev" onclick=""><i class="fa fa-angle-left"></i></a>
+                                                        <a class="on">1</a>
+                                                        <a onclick="">2</a>
+                                                        <a class="arrow" id="next" onclick=""><i class="fa fa-angle-right"></i></a>
+                                                        <a class="arrow" id="nextAll" onclick=""><i class="fa fa-angle-double-right"></i></a>
+                                                    </div>
+                                                    <!-- // 게시판 페이지 버튼(pagination) 영역 -->
+                                                    <!-- // 게시판 영역 -->
+                                                    
+                                                </section>
+                                            </div>
+                                            <!-- // 4. 탭(상품 Q&A) 본문 -->
+                                                            
+                                            <!-- 5. 탭(관련 상품) 본문 -->
+                                            <div class="tabs-pane fade" id="tab-additiona-subD"> 
+                                            <section class="tab-conent-division-wrap product-list-thumbnail-slide">
+                                                <h5 class="text-extra-large font-weight-600">관련상품</h5>
+                                                <!-- 관련 상품 전체 영역 박스 -->
+                                                           <!-- 반복) 슬라이드 썸네일 이미지 컨텐츠 -->
+                                                            <div class="product-list-element-wrap ">
+                                                                <div class="product-list-element-content">
+                                                                    <div class="product-list-element text-center col-xs-6 col-md-3 col-lg-3" onclick="">
+                                                                        <div class="product-tumbnail-boxing">
+                                                                            <!-- 상품 이미지 -->
+                                                                            <div class="img-gray">
+                                                                                <img src="https://cdn-pro-web-151-224.cdn-nhncommerce.com/biontech_godomall_com/data/goods/21/12/52/1000000039/1000000039_detail_09.png" alt="TEXT" class="product-tumbnail-round">
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="product-name-boxing">
+                                                                            <!-- 상품 제목/설명 -->
+                                                                            <p class="name-more">저수조 없는 직수형</p>
+                                                                            <p class="name">바이온텍 알칼리 이온수기 BTM-1800</p>
+                                                                        </div>
+                                                                        <div class="product-price-boxing">
+                                                                                <!-- 상품 가격 -->
+                                                                                <p class="sale-cost">2,490,000<span class="cost-won">원</span></p>
+                            
+                                                                            <!-- 이벤트 상품 -->
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                            
+                                                                            <!-- 렌탈가격 -->
+                                                                            <div class="display-block">
+                                                                                <p class="sale-cost display-block"><span class="cost-rental-title">월 렌탈료 (<span class="font-weight-500">60</span>개월)</span>48,900<span class="cost-won">원</span></p>
+                                                                            </div>
+                                                                            <div class="display-block">
+                                                                                <p class="sale-cost display-block"><span class="cost-rental-title text-bold">총 렌탈료</span>29,340,000<span class="cost-won">원</span></p>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="product-list-element text-center col-xs-6 col-md-3 col-lg-3" onclick="">
+                                                                        <div class="product-tumbnail-boxing">
+                                                                            <!-- 상품 이미지 -->
+                                                                            <div class="img-gray">
+                                                                                <img src="https://cdn-pro-web-151-224.cdn-nhncommerce.com/biontech_godomall_com/data/goods/20/05/22/1000000002/1000000002_detail_023.png" alt="TEXT" class="product-tumbnail-round">
+                                                                                    <img src="https://view01.wemep.co.kr/wmp-sticker/34/202103/09/quwf6otxyamd.png" alt="이벤트" class="sale-event-icon">
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="product-name-boxing">
+                                                                            <!-- 상품 제목/설명 -->
+                                                                            <p class="name-more">정수는 물론 알칼리 이온수와 산성 이온수까지</p>
+                                                                            <p class="name">바이온텍 알칼리 이온수기 BTM-1800</p>
+                                                                        </div>
+                                                                        <div class="product-price-boxing">
+                                                                                
+                                                                                
+                            
+                                                                            <!-- 이벤트 상품 -->
+                                                                                <!-- 상품 가격 : 할인표시-->
+                                                                                <p class="cost">2,190,000<span class="cost-won">원</span></p>
+                                                                                <!-- 할인된 가격 -->
+                                                                                <p class="sale-cost">2,090,000<span class="cost-won">원</span></p>
+                            
+                                                                            <!-- 렌탈가격 -->
+                                                                            <div class="display-block">
+                                                                                <p class="sale-cost display-block"><span class="cost-rental-title">월 렌탈료 (<span class="font-weight-500">60</span>개월)</span>38,900<span class="cost-won">원</span></p>
+                                                                            </div>
+                                                                            <div class="display-block">
+                                                                                <p class="sale-cost display-block"><span class="cost-rental-title text-bold">총 렌탈료</span>23,340,000<span class="cost-won">원</span></p>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="product-list-element text-center col-xs-6 col-md-3 col-lg-3" onclick="">
+                                                                        <div class="product-tumbnail-boxing">
+                                                                            <!-- 상품 이미지 -->
+                                                                            <div class="img-gray">
+                                                                                <img src="https://cdn-pro-web-151-224.cdn-nhncommerce.com/biontech_godomall_com/data/goods/21/12/52/1000000039/1000000039_detail_09.png" alt="TEXT" class="product-tumbnail-round">
+                                                                                    <img src="https://view01.wemep.co.kr/wmp-sticker/34/202103/09/quwf6otxyamd.png" alt="이벤트" class="sale-event-icon">
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="product-name-boxing">
+                                                                            <!-- 상품 제목/설명 -->
+                                                                            <p class="name-more">저수조 없는 직수형</p>
+                                                                            <p class="name">바이온텍 알칼리 이온수기 BTM-1800</p>
+                                                                        </div>
+                                                                        <div class="product-price-boxing">
+                                                                                <!-- 상품 가격 -->
+                                                                                <p class="sale-cost">2,490,000<span class="cost-won">원</span></p>
+                            
+                                                                            <!-- 이벤트 상품 -->
+                                                                            <!-- 렌탈가격 -->
+                                                                            <div class="display-block">
+                                                                                <p class="sale-cost display-block"><span class="cost-rental-title">월 렌탈료 (<span class="font-weight-500">60</span>개월)</span>48,900<span class="cost-won">원</span></p>
+                                                                            </div>
+                                                                            <div class="display-block">
+                                                                                <p class="sale-cost display-block"><span class="cost-rental-title text-bold">총 렌탈료</span>29,340,000<span class="cost-won">원</span></p>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="product-list-element text-center col-xs-6 col-md-3 col-lg-3" onclick="">
+                                                                        <div class="product-tumbnail-boxing">
+                                                                            <!-- 상품 이미지 -->
+                                                                            <div class="img-gray">
+                                                                                <img src="https://cdn-pro-web-151-224.cdn-nhncommerce.com/biontech_godomall_com/data/goods/20/05/22/1000000002/1000000002_detail_023.png" alt="TEXT" class="product-tumbnail-round">
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="product-name-boxing">
+                                                                            <!-- 상품 제목/설명 -->
+                                                                            <p class="name-more">정수는 물론 알칼리 이온수와 산성 이온수까지</p>
+                                                                            <p class="name">바이온텍 알칼리 이온수기 BTM-1800</p>
+                                                                        </div>
+                                                                        <div class="product-price-boxing">
+                                                                            <!-- 이벤트 상품 -->
+                                                                                <!-- 상품 가격 : 할인표시-->
+                                                                                <p class="cost">2,190,000<span class="cost-won">원</span></p>
+                                                                                <!-- 할인된 가격 -->
+                                                                                <p class="sale-cost">2,090,000<span class="cost-won">원</span></p>
+                                                                            <!-- 렌탈가격 -->
+                                                                            <div class="display-block">
+                                                                                <p class="sale-cost display-block"><span class="cost-rental-title">월 렌탈료 (<span class="font-weight-500">60</span>개월)</span>38,900<span class="cost-won">원</span></p>
+                                                                            </div>
+                                                                            <div class="display-block">
+                                                                                <p class="sale-cost display-block"><span class="cost-rental-title text-bold">총 렌탈료</span>23,340,000<span class="cost-won">원</span></p>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div> <!-- // 반복) 슬라이드 썸네일 이미지 컨텐츠 -->
+                                            </section>
+                                            <!-- // 상품 이미지 정보 영역 -->
+                                            </div>
+                                            <!-- // 5. 탭(관련 상품) 본문 -->		 
+                                        </div>
+                                    </div>  
+                                   </section>
+                                   <!-- ================ // 분리 section 2단 :: 상품 상세정보 영역  ================ -->
+                            </div>						
+                        </div>
+                    </div>
+                </div>		    						
+            </section>   		
+        </main>				
+    </div>
+    <div id="footer"></div>
+</body>
+
+
+
+<!-- js -->
+
+
+<script type="text/javascript" src="../../assets/js/vendor/modernizr.min.js"></script>
+<!--<script type="text/javascript" src="./assets/js/vendor/jquery.min.js"></script>	-->
+<script type="text/javascript" src="../../assets/js/vendor/jquery.js"></script>
+<script type="text/javascript" src="../../assets/js/vendor/theme-vendors.js"></script>	
+<script type="text/javascript" src="../../assets/js/vendor/theme.min.js"></script>	
+
+<script type="text/javascript" src="../../assets/js/vendor/fresco/js/fresco.js"></script>
+
+<script type="text/javascript" src="../../assets/js/common.js"></script>	
+<script type="text/javascript">
+	$(function() {
+		$("#header").load('../include/header.html');
+		$("#footer").load('../include/footer.html');
+	});
+</script>
+</html>

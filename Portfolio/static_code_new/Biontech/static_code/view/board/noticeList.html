@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>바이온텍</title>
+	<div id="header"></div>
+	<!-- css -->
+	<link href="https://fonts.googleapis.com/css?family=Roboto%7cRubik:300,400" rel="stylesheet">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="../../assets/css/assets_css/theme-vendors.css">
+	<link rel="stylesheet" type="text/css" href="../../assets/css/assets_css/reset.css">
+	<link rel="stylesheet" type="text/css" href="../../assets/css/assets_css/theme.css">
+	<link rel="stylesheet" type="text/css" href="../../assets/css/vendor/fresco/css/fresco.css">
+	<link rel="stylesheet"  href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
+	<!-- js -->
+		<!-- Swiper JS -->		
+	<script type="text/javascript" src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+</head>
+<body class="woocommerce single">
+	<div id="wrap">
+		<div class="container">
+    		<!-- ================ 분리 section 1단 :: 타이틀 영역  ================ -->
+   			<section class="paging-head-content-wrap md-no-padding-bottom">
+   				<!-- 공통 타이틀 스타일 (title-style-short) -->
+   				<div class="title-contain-short md-no-padding">
+    				<h1 class="title-style title-style-middle-regular title-dark-color">공지사항</h1>
+    			</div>
+			</section>
+			<!-- ================ // 분리 section 1단 :: 타이틀 영역  ================ -->
+    		<!-- ================ 분리 section 2단 :: 게시판 영역  ================ -->
+      		<section>
+				<!-- 게시판 영역 -->
+						<!-- 공지사항 미고정 -->
+						
+						<!-- //공지사항 미고정 -->
+					<table class="table basic_table_element shop_cart_table shop_prd_inq_table xs_table_block margin-20px-bottom">
+					<thead class="xs-display-none">
+						<tr>
+							<th style="width: 100px">번호</th>
+							<th style="width: auto">제목</th>
+							<th style="width: 120px">작성일</th>
+							<th style="width: 120px">조회</th>
+						</tr>
+					</thead>
+					<tbody>
+						<!-- 공지사항 고정 -->
+						<tr>
+							<td class="xs-display-none"><a href="noticeView.do?idx=${i.nb_idx}"><span>-</span></a></td>
+							<td class="text-left">
+								<p><a class="text-cut" href="noticeView.do?idx=${i.nb_idx}"><b>바이온텍 공식몰 오픈</b></a></p>
+								<div class="display-none xs-display-block text-extra-small margin-5px-top">
+									<a href="noticeView.do?idx=${i.nb_idx}"><span class="text-gray padding-10px-right"></span></a>
+								</div>
+							</td>
+							<td class="xs-display-none"><span>2020.07.08</span></td>
+							<td class="xs-display-none"><span>986</span></td>
+						</tr>
+						
+						<!-- //공지사항 고정 -->
+						
+						<tr>
+							<td class="xs-display-none"><a href="noticeView.do?idx=${i.nb_idx}"><span>3</span></a></td>
+							<td class="text-left">
+								<p><a class="text-cut" href="noticeView.do?idx=${i.nb_idx}"><b>바이온텍 공식몰 회원혜택 안내</b></a></p>
+								<div class="display-none xs-display-block text-extra-small margin-5px-top">
+									<a href="noticeView.do?idx=${i.nb_idx}"><span class="text-gray padding-10px-right"></span></a>
+								</div>
+							</td>
+							<td class="xs-display-none"><span>2020.07.29</span></td>
+							<td class="xs-display-none"><span>332</span></td>
+						</tr>
+      <tr>
+							<td class="xs-display-none"><a href="noticeView.do?idx=${i.nb_idx}"><span>2</span></a></td>
+							<td class="text-left">
+								<p><a class="text-cut" href="noticeView.do?idx=${i.nb_idx}"><b>12월 카드사별 무이자 할부 이벤트</b></a></p>
+								<div class="display-none xs-display-block text-extra-small margin-5px-top">
+									<a href="noticeView.do?idx=${i.nb_idx}"><span class="text-gray padding-10px-right"></span></a>
+								</div>
+							</td>
+							<td class="xs-display-none"><span>2020.4.18</span></td>
+							<td class="xs-display-none"><span>21</span></td>
+						</tr>
+      <tr>
+							<td class="xs-display-none"><a href="noticeView.do?idx=${i.nb_idx}"><span>1</span></a></td>
+							<td class="text-left">
+								<p><a class="text-cut" href="noticeView.do?idx=${i.nb_idx}"><b>바이온텍 1기 서포터즈 당첨자 발표</b></a></p>
+								<div class="display-none xs-display-block text-extra-small margin-5px-top">
+									<a href="noticeView.do?idx=${i.nb_idx}"><span class="text-gray padding-10px-right"></span></a>
+								</div>
+							</td>
+							<td class="xs-display-none"><span>2020.01.29</span></td>
+							<td class="xs-display-none"><span>67</span></td>
+						</tr>
+      
+						</tbody>
+				</table>	
+					<!-- 검색 영역 -->
+					<div class="board-type-input margin-50px-top margin-auto-lr width-fit-content">
+									<span class="input-date select-span position-relative">
+									<select id="time" place="" class="input-date" onchange="search();">
+										<option value="">기간</option>
+										<option value="week">일주일</option>
+										<option value="month">한달 </option>
+									</select>
+									<span class="select-icon fa fa-angle-down"></span>
+								</span>
+								<span class="input-title select-span position-relative">
+									<select id="input_type" place="" class="input-title" onchange="search();">
+										<option value="title">제목</option>
+										<option value="content">내용</option>
+										<option value="ticon">제목+내용</option>
+									</select>
+									<span class="select-icon fa fa-angle-down"></span>
+								</span>
+								<span class="input-search">
+									<input type="text" id="input" class="input-search" value="">
+									<button type="button" class="search-btn" onclick="search();">검색</button>
+								</span>
+								</div>
+					<!-- // 검색 영역 -->
+					<!-- 게시판 페이지 버튼(pagination) 영역 -->
+					    <div class="pagination no-margin padding-50px-top"> 
+                                <a class="on">1</a>
+                                <a onclick="">2</a>
+                            </div> 
+					<!-- // 게시판 페이지 버튼(pagination) 영역 -->
+   			</section>
+   			<!-- ================ // 분리 section 2단 :: 게시판 영역  ================ -->
+		</div>
+	</div>
+    <div id="footer"></div>
+</body>
+
+<!-- js -->
+
+
+<script type="text/javascript" src="../../assets/js/vendor/modernizr.min.js"></script>
+<!--<script type="text/javascript" src="./assets/js/vendor/jquery.min.js"></script>	-->
+<script type="text/javascript" src="../../assets/js/vendor/jquery.js"></script>
+<script type="text/javascript" src="../../assets/js/vendor/theme-vendors.js"></script>	
+<script type="text/javascript" src="../../assets/js/vendor/theme.min.js"></script>	
+
+<script type="text/javascript" src="../../assets/js/vendor/fresco/js/fresco.js"></script>
+
+<script type="text/javascript" src="../../assets/js/common.js"></script>	
+<script type="text/javascript">
+	$(function() {
+		$("#header").load('../include/header.html');
+		$("#footer").load('../include/footer.html');
+	});
+</script>
+
+</div>
+<!-- js -->
+
+
+<script type="text/javascript" src="../../assets/js/vendor/modernizr.min.js"></script>
+<!--<script type="text/javascript" src="./assets/js/vendor/jquery.min.js"></script>	-->
+<script type="text/javascript" src="../../assets/js/vendor/jquery.js"></script>
+<script type="text/javascript" src="../../assets/js/vendor/theme-vendors.js"></script>	
+<script type="text/javascript" src="../../assets/js/vendor/theme.min.js"></script>	
+
+<script type="text/javascript" src="../../assets/js/vendor/fresco/js/fresco.js"></script>
+
+<script type="text/javascript" src="../../assets/js/common.js"></script>	
+<script type="text/javascript">
+	$(function() {
+		$("#header").load('../include/header.html');
+		$("#footer").load('../include/footer.html');
+	});
+</script>
+</html>

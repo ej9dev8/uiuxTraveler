@@ -1,0 +1,118 @@
+<nav class="accordion position-relative" id="accordionCategory">
+	<div class="accordion-item">
+
+
+		<div class="navbar">
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-xs-12">
+						<div class="accordion-header copy gnb-wrap clearfix">
+							<button type="button" class="accordion-button collapsed gnb-btn sm-display-none" id="gnbBtn" type="button" data-bs-toggle="collapse" data-bs-target="#collapseMenu" aria-expanded="false" aria-controls="collapseMenu"><i class="ti ti-menu margin-5px-right"></i>Category</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>	
+
+		<div id="collapseMenu" class="accordion-collapse collapse category-wrap container no-padding" data-bs-parent="#accordionCategory">
+			<div class="accordion-body row no-margin">
+				<div class="mo-utile-menu bg-red display-none sm-display-block">
+					<button type="button" onclick="Common.closeGnbBtn()" class="btn mo-close-btn">모바일 전체카테고리 닫기</button> 
+				</div>			
+				<div class="category-sort position-relative" id="side_menu">
+						<div class="category-slide">
+							<ul class="sort-link-area">
+								<!-- sort menu foreach 10개 -->
+								<li class="sort-menu">
+									<a href="#" class="" style="background-color: rgb(45, 150, 205); color: rgb(255, 255, 255); border-color: rgba(255, 255, 255, 0.1);">온라인 강의</a>
+									<span class="toggle toggle-icon display-none sm-display-block"></span>
+									<!--filter menu-->
+									<div class="sort-filter-area" style="display: none;">
+										<div class="left-area">
+										<!-- <h3>${group.sp_to_name}</h3> -->
+											<ul class="filter-list">
+												<li><a href="../lecture/onBrand.html">브랜드</a></li>
+												<li><a href="../lecture/onBrand.html">상품</a></li>
+												<li><a href="../lecture/onBrand.html">세일즈</a></li>
+												<li><a href="../lecture/onBrand.html">서비스</a></li>
+												<!-- <li><a href="onlineLecture.do?ca=5">서비스</a></li> -->
+											</ul>
+										</div>
+									</div>
+									<!--//filter menu-->
+								</li>
+								<li class="sort-menu">
+									<a href="offLineLecture.do" style="background-color: rgb(45, 150, 205); color: rgb(255, 255, 255); border-color: rgba(255, 255, 255, 0.1);">오프라인 강의</a>
+									<!-- <span class="toggle toggle-icon display-none sm-display-block"></span>-->
+									<!--filter menu-->
+									<div class="sort-filter-area" style="display: none;">
+										<div class="left-area">
+										<!-- <h3>${group.sp_to_name}</h3> -->
+											<ul class="filter-list">
+												<li><a href="offSurvey.do">설문제출</a></li>
+											</ul>
+										</div>
+									</div> 
+									<!--//filter menu-->
+								</li>
+								<li class="sort-menu">
+									<a href="#" style="background-color: rgb(45, 150, 205); color: rgb(255, 255, 255); border-color: rgba(255, 255, 255, 0.1);">자료실</a>
+									<span class="toggle toggle-icon display-none sm-display-block"></span>
+									<!--filter menu-->
+									<div class="sort-filter-area" style="display: none;">
+										<div class="left-area">
+										<!-- <h3>${group.sp_to_name}</h3> -->
+											<ul class="filter-list">
+												<li><a href="eBrochure.do">E - 브로셔</a></li>
+												<li><a href="videoBoard.do">동영상 자료실</a></li>
+											</ul>
+										</div>
+									</div>
+									<!--//filter menu-->
+								</li>
+								<li class="sort-menu">
+									<a href="#" style="background-color: rgb(45, 150, 205); color: rgb(255, 255, 255); border-color: rgba(255, 255, 255, 0.1);">게시판</a>
+									<span class="toggle toggle-icon display-none sm-display-block"></span>
+									<!--filter menu-->
+									<div class="sort-filter-area" style="display: none;">
+										<div class="left-area">
+										<!-- <h3>${group.sp_to_name}</h3> -->
+											<ul class="filter-list">
+												<li><a href="fordNotice.do">공지사항</a></li>
+												<li><a href="fordNews.do">자동차 뉴스</a></li>
+											</ul>
+										</div>
+									</div>
+									<!--//filter menu-->
+								</li>
+								<li class="sort-menu">
+									<a href="#" style="background-color: rgb(45, 150, 205); color: rgb(255, 255, 255); border-color: rgba(255, 255, 255, 0.1);" class="">나의 강의실</a>
+									<span class="toggle toggle-icon display-none sm-display-block"></span>
+									<!--filter menu-->
+									<div class="sort-filter-area" style="display: none;">
+										<div class="left-area">
+										<!-- <h3>${group.sp_to_name}</h3> -->
+											<ul class="filter-list">
+												<li><a href="myEdu.do">학습현황</a></li>
+												<li><a href="myPage.do">개인정보 변경</a></li>
+												<li><a href="./logout.do">로그아웃</a></li>
+											</ul>
+										</div>
+									</div>
+									<!--//filter menu-->
+								</li>
+								<!--// sort menu foreach -->
+							</ul>
+						</div>
+
+				</div>		
+			</div>
+		</div>
+
+
+
+		
+
+	</div>
+</nav>	
+	

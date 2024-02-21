@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=3.0, user-scalable=yes" />
+    <meta id="meta_description" name="description" content="">
+    <meta id="meta_keywords" name="keywords" content="">
+	<title>바이온텍</title>
+    <div id="header"></div>
+
+	<!-- css -->
+	<link href="https://fonts.googleapis.com/css?family=Roboto%7cRubik:300,400" rel="stylesheet">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="../../assets/css/assets_css/theme-vendors.css">
+	<link rel="stylesheet" type="text/css" href="../../assets/css/assets_css/reset.css">
+	<link rel="stylesheet" type="text/css" href="../../assets/css/assets_css/theme.css">
+	<link rel="stylesheet" type="text/css" href="../../assets/css/vendor/fresco/css/fresco.css">
+    <link rel="stylesheet"  href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
+    
+	<!-- js -->
+		<!-- Swiper JS -->		
+	<script type="text/javascript" src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+</head>
+<body class="woocommerce single">
+    <div id="wrap">
+		<section class="vc_row pt-50 pb-50">
+	    	<div class="display-fix-size container">
+	       		<div class="login-form-content-wrap member-login-form-content-wrap col-xs-12 col-sm-12 col-md-6 col-lg-6">
+	       			<div class="title-contain-short login-form-content-sizing sm-width-100">
+	       				<!-- 로그인 타이틀 -->
+	       				<h1 class="title-style title-style-middle-regular login-form-title xs-margin-20px-bottom">회원 로그인</h1>
+	       				<form name="loginData" action="login.do" method="post">
+		       				<!-- 로그인 form -->
+			    			<div class="login-form-content">
+			    				<!-- form content -->
+			        			<div class="login-form-main form-style">
+	    							<input type="text" name="m_id" id="m_id" placeholder="아이디" class="xs-height-45px"/>
+	    							<input type="password" name="m_pw" id="m_pw" placeholder="비밀번호" class="xs-height-45px"/>
+			    				</div>
+			    				
+			    				<!-- 로그인 btn -->
+				    			<div class="enter-login-content btn-style main-bg-btn">
+				    				<button type="submit" class="xs-text-sm-medium xs-height-45px no-margin">로그인</button>
+				    			</div>
+			    			</div>
+			    			
+			    			
+			    			<!-- form info content -->
+		    				<div class="login-form-check-text">
+	    						<p class="save-id-chk multi-input-style-chk">
+									<label><input type="checkbox" name="saveid" id="idSave"><a class="chk-package"><span>아이디 저장</span></a></label>
+								</p>
+								<p class="login-form-text-content text-center text-sm-small-medium">
+	        						<a class="find-member-info" href="./findInfo.do">아이디 / 비밀번호 찾기</a>
+	        						<a class="join-member text-main font-weight-700" href="./join_form.do">회원가입</a>
+	    						</p>
+	    					</div>
+		    			</form>
+		    			<!-- 
+		    			간편 로그인 content
+		    			<div class="sns-logon-form-content margin-50px-tb">
+		    				<p class="sns-login-text-content">
+		    					<a class="sns-login-text">SNS 간편 로그인</a>
+		    					<a class="sns-login-border"></a>
+		    				</p>
+		    				<ul class="sns-login-icon">
+		    					<li><a onclick="loginWithKakao()"><img src="/assets/img/member/sns_login_btn_img01.png" src="카카오톡 로그인"></a></li>
+		    					<li><a id="naver_id_login"><img src="/assets/img/member/sns_login_btn_img02.png" src="네이버 로그인"></a></li>
+		    				</ul>
+		    			</div>
+		    			 -->
+	    			</div>
+				</div>
+				
+	       		<div class="login-form-content-wrap non-member-login-form-content-wrap col-xs-12 col-sm-12 col-md-6 col-lg-6">
+	       			<div class="title-contain-short login-form-content-sizing sm-width-100">
+	       				<!-- 로그인 타이틀 -->
+	       				<h1 class="title-style title-style-middle-regular login-form-title xs-margin-20px-bottom">비회원 주문조회</h1>
+	       				<!-- 로그인 form -->
+		    			<div class="login-form-content">
+		    				<!-- form content -->
+		        			<div class="login-form-main form-style">
+		    					<form id="orderForm" method="post">
+		    						<input type="text" placeholder="주문자명" id="name" name="del_name" class="xs-height-45px">
+		    						<input type="text" placeholder="주문번호 (하이픈(-)포함)" name="o_code" id="code" class="xs-height-45px">
+		    					</form>
+		    				</div>
+		    			</div>
+		    			<!-- 로그인 btn -->
+		    			<div class="enter-login-content btn-style gray-bg-btn">
+		    				<button type="button" class="xs-text-sm-medium xs-height-45px no-margin" onclick="selectOrdersNonMem();">조회하기</button>
+		    			</div>
+	    			</div>
+	       		</div>
+			</div>
+		</section>
+	</div>
+<div id="footer"></div>
+</body>
+
+
+
+<!-- js -->
+
+
+<script type="text/javascript" src="../../assets/js/vendor/modernizr.min.js"></script>
+<!--<script type="text/javascript" src="./assets/js/vendor/jquery.min.js"></script>	-->
+<script type="text/javascript" src="../../assets/js/vendor/jquery.js"></script>
+<script type="text/javascript" src="../../assets/js/vendor/theme-vendors.js"></script>	
+<script type="text/javascript" src="../../assets/js/vendor/theme.min.js"></script>	
+
+<script type="text/javascript" src="../../assets/js/vendor/fresco/js/fresco.js"></script>
+
+<script type="text/javascript" src="../../assets/js/common.js"></script>	
+<script type="text/javascript">
+	$(function() {
+		$("#header").load('../include/header.html');
+		$("#footer").load('../include/footer.html');
+	});
+</script>
+</html>

@@ -1,0 +1,1079 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>바이온텍</title>
+	<div id="header"></div>
+	<!-- css -->
+	<link href="https://fonts.googleapis.com/css?family=Roboto%7cRubik:300,400" rel="stylesheet">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="./assets/css/assets_css/theme-vendors.css">
+	<link rel="stylesheet" type="text/css" href="./assets/css/assets_css/reset.css">
+	<link rel="stylesheet" type="text/css" href="./assets/css/assets_css/theme.css">
+	<link rel="stylesheet" type="text/css" href="./assets/css/vendor/fresco/css/fresco.css">
+	<link rel="stylesheet"  href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
+	<!-- js -->
+		<!-- Swiper JS -->		
+	<script type="text/javascript" src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+</head>
+<body>
+    <div id="wrap" class="no-padding">
+		<main id="content" class="content main-docm">
+			<!-- ================ 분리 section 1단 :: 배너 슬라이드 컨텐츠 영역  ================ -->
+			<section class="main-slider-content-wrap no-padding">
+				<div class="container-fluid no-padding">
+					<div class="row">
+							<!-- Swiper -->
+							<div class="main-banner swiper swiperMain mySwiper mySwiperMain">
+							  <div class="swiper-wrapper">
+									<div class="swiper-slide col-xs-12 no-padding bg-cover sm-display-none"><a href="../static_code/view/board/eventList.html"><img src="./assets/img/banner_img/slide_banner_01.jpeg" class="width-100"></a></div>
+									<div class="swiper-slide col-xs-12 no-padding bg-cover sm-display-none"><a href="../static_code/view/board/eventList.html"><img src="./assets/img/banner_img/slide_banner_02.jpeg" class="width-100"></a></div>
+									<div class="swiper-slide col-xs-12 no-padding bg-cover sm-display-none"><a href="../static_code/view/board/eventList.html"><img src="./assets/img/banner_img/slide_banner_03.png" class="width-100"></a></div>
+
+									<div class="swiper-slide col-xs-12 no-padding bg-cover display-none sm-display-block"><a href="../static_code/view/board/eventList.html"><img src="https://cdn-pro-web-151-224.cdn-nhncommerce.com/biontech_godomall_com/data/skin/mobile/mo_designart/img/banner/slider_3606671697/6a34abfb617a48d4ef72147b6f2da289_59108.png" class="width-100"></a></div>
+									<div class="swiper-slide col-xs-12 no-padding bg-cover display-none sm-display-block"><a href="../static_code/view/board/eventList.html"><img src="https://cdn-pro-web-151-224.cdn-nhncommerce.com/biontech_godomall_com/data/skin/mobile/mo_designart/img/banner/slider_3606671697/b212ce1025b7fc910fdd79bc546395f6_84852.jpg" class="width-100"></a></div>
+							  </div>
+							  <div class="swiper-button-next sm-display-none"></div>
+							  <div class="swiper-button-prev sm-display-none"></div>
+							  <div class="swiper-pagination squ-pagination"></div>
+							</div>
+					</div>
+				</div>
+				<!-- Initialize Swiper -->
+				<script type="text/javascript">
+				var swiperMain = new Swiper(".mySwiperMain", {
+					pagination: {
+					el: ".swiper-pagination",
+					clickable: false,
+					},
+					autoplay: {
+						delay: 2500,
+						disableOnInteraction: false,
+					},
+					navigation: {
+					nextEl: ".swiper-button-next",
+					prevEl: ".swiper-button-prev",
+					},
+				});
+				</script>
+			</section>
+			<!-- ================ // 분리 section 1단 :: 배너 슬라이드 컨텐츠 영역  ================ -->
+
+			<!-- ================ 분리 section 2단 :: 제품사용 링크 컨텐츠 영역  ================ -->
+			<section id="pageDivision" class="half-page">
+				<div class="container"> <!-- 전체 wrap -->
+					<div class="row">							
+						<div class="col-sm-6 xs-margin-15px-bottom">
+							<a href="../static_code/view/board/noticeList.html">
+									<img alt="${i.p_name }" src="https://cdn-pro-web-151-224.cdn-nhncommerce.com/biontech_godomall_com/data/skin/front/mo_designart/img/banner/1c04e96f851bd406ff8627ffc3cc9f63_38991.jpg" class="visibility-visible">
+							</a>
+						</div>
+						<div class="col-sm-6">
+							<a href="../static_code/view/board/noticeList.html">
+									<img alt="${i.p_name }" src="https://cdn-pro-web-151-224.cdn-nhncommerce.com/biontech_godomall_com/data/skin/front/mo_designart/img/banner/2b0f96c975be5fba07113b756dbd76a2_19447.jpg" class="visibility-visible">
+							</a>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- ================ // 분리 section 2단 :: 제품사용 링크 컨텐츠 영역  ================ -->
+
+			<!-- ================ 분리 section 3단 :: '인기상품' 컨텐츠 영역  ================ -->
+			<section id="pageDivision">
+				<div class="container main-content-wrap display-fix-size"> <!-- 전체 wrap -->
+					<div class="row">
+						<div class="col-xs-12">
+							<div class="main-content-title display-inline"> <!-- 컨텐츠 상위 타이틀 영역 -->
+								<p class="main-titile">
+									<a class="cursor-default">인기상품</a>
+								</p>
+							</div>
+						</div>
+						
+						<div class="col-xs-12">
+							<div class="row main-content-item-wrap"><!-- 컨텐츠 wrap -->
+								<div class="product-list-element-wrap ">
+									<div class="product-list-element-content">
+										<div class="product-list-element text-center col-xs-6 col-md-3 col-lg-3" onclick="location.href='../static_code/view/product/productDetail.html'">
+											<div class="product-tumbnail-boxing">
+												<!-- 상품 이미지 -->
+												<div class="img-gray">
+													<img src="https://cdn-pro-web-151-224.cdn-nhncommerce.com/biontech_godomall_com/data/goods/21/12/52/1000000039/1000000039_detail_055.png" alt="TEXT" class="product-tumbnail-round">
+												</div>
+											</div>
+											<div class="product-name-boxing">
+												<!-- 상품 제목/설명 -->
+												<p class="name-more">저수조 없는 직수형</p>
+												<p class="name">바이온텍 알칼리 이온수기 BTM-1800</p>
+											</div>
+											<div class="product-price-boxing">
+													<!-- 상품 가격 -->
+													<p class="sale-cost">2,490,000<span class="cost-won">원</span></p>
+												<!-- 이벤트 상품 -->
+												<!-- 렌탈가격 -->
+												<div class="display-block">
+													<p class="sale-cost display-block"><span class="cost-rental-title">월 렌탈료 (<span class="font-weight-500">60</span>개월)</span>48,900<span class="cost-won">원</span></p>
+												</div>
+												<div class="display-block">
+													<p class="sale-cost display-block"><span class="cost-rental-title text-bold">총 렌탈료</span>29,340,000<span class="cost-won">원</span></p>
+												</div>
+											</div>
+										</div>
+										<div class="product-list-element text-center col-xs-6 col-md-3 col-lg-3" onclick="location.href='../static_code/view/product/productDetail.html'">
+											<div class="product-tumbnail-boxing">
+												<!-- 상품 이미지 -->
+												<div class="img-gray">
+													<img src="https://cdn-pro-web-151-224.cdn-nhncommerce.com/biontech_godomall_com/data/goods/20/09/39/1000000037/1000000037_detail_074.jpg" alt="TEXT" class="product-tumbnail-round">
+														<img src="https://view01.wemep.co.kr/wmp-sticker/34/202103/09/quwf6otxyamd.png" alt="이벤트" class="sale-event-icon">
+												</div>
+											</div>
+											<div class="product-name-boxing">
+												<!-- 상품 제목/설명 -->
+												<p class="name-more">내 몸을 바꾸는 가장 쉬운 습관</p>
+												<p class="name">바이온텍 텀블러형 수소수기 BTH-101T 수소수 생성기</p>
+											</div>
+											<div class="product-price-boxing">
+												<!-- 이벤트 상품 -->
+													<!-- 상품 가격 : 할인표시-->
+													<p class="cost">452,000<span class="cost-won">원</span></p>
+													<!-- 할인된 가격 -->
+													<p class="sale-cost">358,000<span class="cost-won">원</span></p>
+												
+												<div class="display-block">
+													<p class="sale-cost display-block"><span class="cost-rental-title"><span class="font-weight-500"></span></span><span class="cost-won"></span></p>
+												</div>
+												<div class="display-block">
+													<p class="sale-cost display-block"><span class="cost-rental-title text-bold"></span><span class="cost-won"></span></p>
+												</div>
+											</div>
+										</div>
+										<div class="product-list-element text-center col-xs-6 col-md-3 col-lg-3" onclick="location.href='../static_code/view/product/productDetail.html'">
+											<div class="product-tumbnail-boxing">
+												<!-- 상품 이미지 -->
+												<div class="img-gray">
+													<img src="https://cdn-pro-web-151-224.cdn-nhncommerce.com/biontech_godomall_com/data/goods/20/05/22/1000000012/1000000012_detail_056.png" alt="TEXT" class="product-tumbnail-round">
+												</div>
+											</div>
+											<div class="product-name-boxing">
+												<!-- 상품 제목/설명 -->
+												<p class="name-more">우리집 365일 공기 청정케어</p>
+												<p class="name">공기청정기 BTA-201</p>
+											</div>
+											<div class="product-price-boxing">
+													<!-- 상품 가격 -->
+													<p class="sale-cost">790,000<span class="cost-won">원</span></p>
+
+												<!-- 이벤트 상품 -->
+												<!-- 렌탈가격 -->
+												<div class="display-block">
+													<p class="sale-cost display-block"><span class="cost-rental-title">월 렌탈료 (<span class="font-weight-500">60</span>개월)</span>33,900<span class="cost-won">원</span></p>
+												</div>
+												<div class="display-block">
+													<p class="sale-cost display-block"><span class="cost-rental-title text-bold">총 렌탈료</span>890,000<span class="cost-won">원</span></p>
+												</div>
+											</div>
+										</div>
+										<div class="product-list-element text-center col-xs-6 col-md-3 col-lg-3" onclick="location.href='../static_code/view/product/productDetail.html'">
+											<div class="product-tumbnail-boxing">
+												<!-- 상품 이미지 -->
+												<div class="img-gray">
+													<img src="https://cdn-pro-web-151-224.cdn-nhncommerce.com/biontech_godomall_com/data/goods/20/09/36/1000000033/1000000033_detail_059.png" alt="TEXT" class="product-tumbnail-round">
+														<img src="https://view01.wemep.co.kr/wmp-sticker/34/202103/09/quwf6otxyamd.png" alt="이벤트" class="sale-event-icon">
+												</div>
+											</div>
+											<div class="product-name-boxing">
+												<!-- 상품 제목/설명 -->
+												<p class="name-more">정수는 물론 알칼리 이온수와 산성 이온수까지</p>
+												<p class="name">바이온텍 냉온 알칼리 이온수기 BTC-5004</p>
+											</div>
+                                            <div class="product-price-boxing">
+												<!-- 이벤트 상품 -->
+													<!-- 상품 가격 : 할인표시-->
+													<p class="cost">4,647,000<span class="cost-won">원</span></p>
+													<!-- 할인된 가격 -->
+													<p class="sale-cost">3,390,000<span class="cost-won">원</span></p>
+												
+												<div class="display-block">
+													<p class="sale-cost display-block"><span class="cost-rental-title">월 렌탈료 (<span class="font-weight-500">60</span>개월)</span>59,900<span class="cost-won">원</span></p>
+												</div>
+												<div class="display-block">
+													<p class="sale-cost display-block"><span class="cost-rental-title text-bold">총 렌탈료</span>23,340,000<span class="cost-won">원</span></p>
+												</div>
+											</div>
+											
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- ================ // 분리 section 3단 :: '인기상품' 컨텐츠 영역  ================ -->
+
+			<!-- ================ 분리 section 4단 :: 상품광고 컨텐츠 영역  ================ -->
+			<section  id="pageDivision" class="main-slider-content-wrap">
+				<div class="container-fluid bg-gray">
+					<div class="row">
+						<!-- Swiper -->
+						<div class="container">
+							<div class="row">
+								<div class="main-banner swiper swiperSub mySwiperSub">
+									<div class="swiper-wrapper">
+										<div class="swiper-slide col-xs-12 bg-gray">
+								<div class="col-sm-7 xs-display-none">
+									<div class="lqd-column col-md-12 no-padding float-left width-35 height-23rem width-100 bg-white">
+										<iframe width="100%" height="100%" src="https://www.youtube.com/embed/rjwM94uWLdA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+									</div>
+								</div>
+								<div class="video-content-wrap col-sm-5 col-xs-12">
+									<div class="width-fit-content xs-float-none xs-margin-auto">
+										<h3 class="text-label display-none xs-display-flex"><span class="font-weight-600 text-main">Biontech</span>
+											<hr class="border-color-extra-dark-gray"><span class="font-weight-300">On Air 🎬</span></h3>
+										<div class="video-post display-none xs-display-block">
+											<iframe width="100%" height="100%" src="https://www.youtube.com/embed/rjwM94uWLdA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+										</div>
+										<h3 class="text-label xs-display-none"><span class="font-weight-600 text-main">Biontech</span>
+											<hr class="border-color-extra-dark-gray"><span class="font-weight-300">On Air 🎬</span></h3>
+										<p class="text-hashtag text-small xs-text-small text-gray">#TVCF #바이온텍 #알칼리이온수생성기</p>
+										<p class="text-title text-large xs-text-large">MBN 생생정보마당에서 알칼리 이온수 생성기 기업 바이온텍을 만나보세요!</p>
+										
+										<p class="text-sub-long text-sm-small xs-text-small text-gray">4대 위장증상(만성설사, 소화불량, 위산과다, 위장 내 이상발효)에 대해 식품의약품안전처로 부터 인증을 받은 알칼리 이온수 생성기!</p>
+										<button class="text-button bg-extra-dark-gray text-sm-small" onclick="location.href='../static_code/view/product/productDetail.html'">제품보기<span class="fa fa-long-arrow-right margin-40px-left"></span></button>
+									</div>
+								</div>
+										</div>
+										<div class="swiper-slide col-xs-12 bg-gray">
+											<div class="col-sm-7 xs-display-none">
+												<div class="lqd-column col-md-12 no-padding float-left width-35 height-23rem width-100 bg-white">
+													<iframe width="100%" height="100%" src="https://www.youtube.com/embed/XAjKERcgfAE?amp;playlist=XAjKERcgfAE&amp;loop=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+												</div>
+											</div>
+											<div class="video-content-wrap col-sm-5 col-xs-12">
+												<div class="width-fit-content xs-float-none xs-margin-auto">
+													<h3 class="text-label display-none xs-display-flex"><span class="font-weight-600 text-main">Biontech</span>
+														<hr class="border-color-extra-dark-gray"><span class="font-weight-300">On Air 🎬</span></h3>
+													<div class="video-post display-none xs-display-block">
+														<iframe width="100%" height="100%" src="https://www.youtube.com/embed/XAjKERcgfAE?amp;playlist=XAjKERcgfAE&amp;loop=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+													</div>
+													<h3 class="text-label xs-display-none"><span class="font-weight-600 text-main">Biontech</span>
+														<hr class="border-color-extra-dark-gray"><span class="font-weight-300">On Air 🎬</span></h3>
+													<p class="text-hashtag text-small xs-text-small text-gray">#TVCF #바이온텍 #김봉곤훈장 #알칼리이온수기</p>
+													<p class="text-title text-large xs-text-large">김봉곤훈장님 전혜란님 부부의 TVCF광고를 공개합니다❤️</p>
+													
+													<p class="text-sub-long text-sm-small xs-text-small text-gray">4물 연구만 38년! 정수는 물론, 알칼리 이온수, 산성 이온수까지!</p>
+													<p class="text-sub-long text-sm-small xs-text-small text-gray">바이온텍 알칼리 이온수기 CF는 4월중 TV에서도 on-air됩니다.</p>
+													<button class="text-button bg-extra-dark-gray text-sm-small" onclick="location.href='../static_code/view/product/productDetail.html'">제품보기<span class="fa fa-long-arrow-right margin-40px-left"></span></button>
+												</div>
+											</div>
+										</div>
+										</div>
+										<div class="swiper-pagination squ-pagination"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+		<!-- Initialize Swiper -->
+		<script type="text/javascript">
+		  var swiperSub = new Swiper(".mySwiperSub", {
+			pagination: {
+			  el: ".swiper-pagination",
+			  clickable: true,
+			},
+		  });
+		</script>
+			</section>
+			<!-- ================ // 분리 section 4단 :: 상품광고 컨텐츠 영역  ================ -->
+
+			<!-- ================ 분리 section 5단 :: '추천상품' 컨텐츠 영역  ================ -->
+			<section id="pageDivision">
+				<div class="container main-content-wrap display-fix-size"> <!-- 전체 wrap -->
+					<div class="row">
+						<div class="col-xs-12">
+							<div class="main-content-title display-inline"> <!-- 컨텐츠 상위 타이틀 영역 -->
+								<p class="main-titile">
+									<a class="cursor-default">추천상품</a>
+								</p>
+							</div>
+						</div>	
+						<div class="col-xs-12">
+							<div class="row">
+								<div class="col-xs-6">
+									<a href="../static_code/view/product/productDetail.html">
+										<article class="liquid-lp liquid-lp-sp-block liquid-lp-featured no-margin-bottom">
+											<figure class="liquid-lp-media">
+											<img alt="${i.p_name }" src="./assets/img/banner_img/best_img01.png" class="visibility-visible">
+											</figure>
+											
+										</article>
+									</a>
+								</div>
+								<div class="col-xs-6">
+									<a href="../static_code/view/product/productDetail.html">
+										<article class="liquid-lp liquid-lp-sp-block liquid-lp-featured no-margin-bottom">
+											<figure class="liquid-lp-media">
+											<img alt="${i.p_name }" src="./assets/img/banner_img/best_img02.png" class="visibility-visible">
+											</figure>
+										</article>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section id="pageDivision">
+				<div class="container main-content-wrap display-fix-size"> <!-- 전체 wrap -->
+					<div class="row">
+						
+						<div class="col-xs-12">
+							<div class="row main-content-item-wrap"><!-- 컨텐츠 wrap -->
+								<div class="product-list-element-wrap ">
+									<div class="product-list-element-content">
+										<div class="product-list-element text-center col-xs-6 col-md-3 col-lg-3" onclick="location.href='../static_code/view/product/productDetail.html'">
+											<div class="product-tumbnail-boxing">
+												<!-- 상품 이미지 -->
+												<div class="img-gray">
+													<img src="https://cdn-pro-web-151-224.cdn-nhncommerce.com/biontech_godomall_com/data/goods/21/12/52/1000000039/1000000039_detail_055.png" alt="TEXT" class="product-tumbnail-round">
+												</div>
+											</div>
+											<div class="product-name-boxing">
+												<!-- 상품 제목/설명 -->
+												<p class="name-more">저수조 없는 직수형</p>
+												<p class="name">바이온텍 알칼리 이온수기 BTM-1800</p>
+											</div>
+											<div class="product-price-boxing">
+													<!-- 상품 가격 -->
+													<p class="sale-cost">2,490,000<span class="cost-won">원</span></p>
+												<!-- 이벤트 상품 -->
+												<!-- 렌탈가격 -->
+												<div class="display-block">
+													<p class="sale-cost display-block"><span class="cost-rental-title">월 렌탈료 (<span class="font-weight-500">60</span>개월)</span>48,900<span class="cost-won">원</span></p>
+												</div>
+												<div class="display-block">
+													<p class="sale-cost display-block"><span class="cost-rental-title text-bold">총 렌탈료</span>29,340,000<span class="cost-won">원</span></p>
+												</div>
+											</div>
+										</div>
+										<div class="product-list-element text-center col-xs-6 col-md-3 col-lg-3" onclick="location.href='../static_code/view/product/productDetail.html'">
+											<div class="product-tumbnail-boxing">
+												<!-- 상품 이미지 -->
+												<div class="img-gray">
+													<img src="https://cdn-pro-web-151-224.cdn-nhncommerce.com/biontech_godomall_com/data/goods/20/09/39/1000000037/1000000037_detail_074.jpg" alt="TEXT" class="product-tumbnail-round">
+														<img src="https://view01.wemep.co.kr/wmp-sticker/34/202103/09/quwf6otxyamd.png" alt="이벤트" class="sale-event-icon">
+												</div>
+											</div>
+											<div class="product-name-boxing">
+												<!-- 상품 제목/설명 -->
+												<p class="name-more">내 몸을 바꾸는 가장 쉬운 습관</p>
+												<p class="name">바이온텍 텀블러형 수소수기 BTH-101T 수소수 생성기</p>
+											</div>
+											<div class="product-price-boxing">
+												<!-- 이벤트 상품 -->
+													<!-- 상품 가격 : 할인표시-->
+													<p class="cost">452,000<span class="cost-won">원</span></p>
+													<!-- 할인된 가격 -->
+													<p class="sale-cost">358,000<span class="cost-won">원</span></p>
+												
+												<div class="display-block">
+													<p class="sale-cost display-block"><span class="cost-rental-title"><span class="font-weight-500"></span></span><span class="cost-won"></span></p>
+												</div>
+												<div class="display-block">
+													<p class="sale-cost display-block"><span class="cost-rental-title text-bold"></span><span class="cost-won"></span></p>
+												</div>
+											</div>
+										</div>
+										<div class="product-list-element text-center col-xs-6 col-md-3 col-lg-3" onclick="location.href='../static_code/view/product/productDetail.html'">
+											<div class="product-tumbnail-boxing">
+												<!-- 상품 이미지 -->
+												<div class="img-gray">
+													<img src="https://cdn-pro-web-151-224.cdn-nhncommerce.com/biontech_godomall_com/data/goods/20/05/22/1000000012/1000000012_detail_056.png" alt="TEXT" class="product-tumbnail-round">
+												</div>
+											</div>
+											<div class="product-name-boxing">
+												<!-- 상품 제목/설명 -->
+												<p class="name-more">우리집 365일 공기 청정케어</p>
+												<p class="name">공기청정기 BTA-201</p>
+											</div>
+											<div class="product-price-boxing">
+													<!-- 상품 가격 -->
+													<p class="sale-cost">790,000<span class="cost-won">원</span></p>
+
+												<!-- 이벤트 상품 -->
+												<!-- 렌탈가격 -->
+												<div class="display-block">
+													<p class="sale-cost display-block"><span class="cost-rental-title">월 렌탈료 (<span class="font-weight-500">60</span>개월)</span>33,900<span class="cost-won">원</span></p>
+												</div>
+												<div class="display-block">
+													<p class="sale-cost display-block"><span class="cost-rental-title text-bold">총 렌탈료</span>890,000<span class="cost-won">원</span></p>
+												</div>
+											</div>
+										</div>
+										<div class="product-list-element text-center col-xs-6 col-md-3 col-lg-3" onclick="location.href='../static_code/view/product/productDetail.html'">
+											<div class="product-tumbnail-boxing">
+												<!-- 상품 이미지 -->
+												<div class="img-gray">
+													<img src="https://cdn-pro-web-151-224.cdn-nhncommerce.com/biontech_godomall_com/data/goods/20/09/36/1000000033/1000000033_detail_059.png" alt="TEXT" class="product-tumbnail-round">
+														<img src="https://view01.wemep.co.kr/wmp-sticker/34/202103/09/quwf6otxyamd.png" alt="이벤트" class="sale-event-icon">
+												</div>
+											</div>
+											<div class="product-name-boxing">
+												<!-- 상품 제목/설명 -->
+												<p class="name-more">정수는 물론 알칼리 이온수와 산성 이온수까지</p>
+												<p class="name">바이온텍 냉온 알칼리 이온수기 BTC-5004</p>
+											</div>
+                                            <div class="product-price-boxing">
+												<!-- 이벤트 상품 -->
+													<!-- 상품 가격 : 할인표시-->
+													<p class="cost">4,647,000<span class="cost-won">원</span></p>
+													<!-- 할인된 가격 -->
+													<p class="sale-cost">3,390,000<span class="cost-won">원</span></p>
+												
+												<div class="display-block">
+													<p class="sale-cost display-block"><span class="cost-rental-title">월 렌탈료 (<span class="font-weight-500">60</span>개월)</span>59,900<span class="cost-won">원</span></p>
+												</div>
+												<div class="display-block">
+													<p class="sale-cost display-block"><span class="cost-rental-title text-bold">총 렌탈료</span>23,340,000<span class="cost-won">원</span></p>
+												</div>
+											</div>
+											
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- ================ // 분리 section 5단 :: '추천상품' 컨텐츠 영역  ================ -->
+
+			<!-- ================ 분리 section 6단 :: '기획상품' 컨텐츠 영역  ================ -->
+			<section id="pageDivision" class="thema-section">
+				<div class="container main-content-wrap display-fix-size"> <!-- 전체 wrap -->
+					<div class="row">
+						<div class="col-xs-12">
+							<div class="main-content-title display-inline"> <!-- 컨텐츠 상위 타이틀 영역 -->
+								<p class="main-titile">
+									<a class="cursor-default">기획상품</a>
+								</p>
+							</div>
+						</div>
+						<div class="col-xs-12">
+							<div class="row main-content-item-wrap"><!-- 컨텐츠 wrap -->
+								<div class="col-xs-12">
+									<div class="row">
+										<div class="product-list-element-wrap ">
+											<div class="product-list-element-content">
+												<div class="product-list-element text-center col-xs-6 col-md-3 col-lg-3" onclick="location.href='../static_code/view/product/productDetail.html'">
+													<div class="product-tumbnail-boxing">
+														<!-- 상품 이미지 -->
+														<div class="img-gray">
+															<img src="https://cdn-pro-web-151-224.cdn-nhncommerce.com/biontech_godomall_com/data/goods/21/12/52/1000000039/1000000039_detail_055.png" alt="TEXT" class="product-tumbnail-round">
+														</div>
+													</div>
+													<div class="product-name-boxing">
+														<!-- 상품 제목/설명 -->
+														<p class="name-more">저수조 없는 직수형</p>
+														<p class="name">바이온텍 알칼리 이온수기 BTM-1800</p>
+													</div>
+													<div class="product-price-boxing">
+															<!-- 상품 가격 -->
+															<p class="sale-cost">2,490,000<span class="cost-won">원</span></p>
+														<!-- 이벤트 상품 -->
+														<!-- 렌탈가격 -->
+														<div class="display-block">
+															<p class="sale-cost display-block"><span class="cost-rental-title">월 렌탈료 (<span class="font-weight-500">60</span>개월)</span>48,900<span class="cost-won">원</span></p>
+														</div>
+														<div class="display-block">
+															<p class="sale-cost display-block"><span class="cost-rental-title text-bold">총 렌탈료</span>29,340,000<span class="cost-won">원</span></p>
+														</div>
+													</div>
+												</div>
+												<div class="product-list-element text-center col-xs-6 col-md-3 col-lg-3" onclick="location.href='../static_code/view/product/productDetail.html'">
+													<div class="product-tumbnail-boxing">
+														<!-- 상품 이미지 -->
+														<div class="img-gray">
+															<img src="https://cdn-pro-web-151-224.cdn-nhncommerce.com/biontech_godomall_com/data/goods/20/09/39/1000000037/1000000037_detail_074.jpg" alt="TEXT" class="product-tumbnail-round">
+																<img src="https://view01.wemep.co.kr/wmp-sticker/34/202103/09/quwf6otxyamd.png" alt="이벤트" class="sale-event-icon">
+														</div>
+													</div>
+													<div class="product-name-boxing">
+														<!-- 상품 제목/설명 -->
+														<p class="name-more">내 몸을 바꾸는 가장 쉬운 습관</p>
+														<p class="name">바이온텍 텀블러형 수소수기 BTH-101T 수소수 생성기</p>
+													</div>
+													<div class="product-price-boxing">
+														<!-- 이벤트 상품 -->
+															<!-- 상품 가격 : 할인표시-->
+															<p class="cost">452,000<span class="cost-won">원</span></p>
+															<!-- 할인된 가격 -->
+															<p class="sale-cost">358,000<span class="cost-won">원</span></p>
+														
+														<div class="display-block">
+															<p class="sale-cost display-block"><span class="cost-rental-title"><span class="font-weight-500"></span></span><span class="cost-won"></span></p>
+														</div>
+														<div class="display-block">
+															<p class="sale-cost display-block"><span class="cost-rental-title text-bold"></span><span class="cost-won"></span></p>
+														</div>
+													</div>
+												</div>
+												<div class="product-list-element text-center col-xs-6 col-md-3 col-lg-3" onclick="location.href='../static_code/view/product/productDetail.html'">
+													<div class="product-tumbnail-boxing">
+														<!-- 상품 이미지 -->
+														<div class="img-gray">
+															<img src="https://cdn-pro-web-151-224.cdn-nhncommerce.com/biontech_godomall_com/data/goods/20/05/22/1000000012/1000000012_detail_056.png" alt="TEXT" class="product-tumbnail-round">
+														</div>
+													</div>
+													<div class="product-name-boxing">
+														<!-- 상품 제목/설명 -->
+														<p class="name-more">우리집 365일 공기 청정케어</p>
+														<p class="name">공기청정기 BTA-201</p>
+													</div>
+													<div class="product-price-boxing">
+															<!-- 상품 가격 -->
+															<p class="sale-cost">790,000<span class="cost-won">원</span></p>
+		
+														<!-- 이벤트 상품 -->
+														<!-- 렌탈가격 -->
+														<div class="display-block">
+															<p class="sale-cost display-block"><span class="cost-rental-title">월 렌탈료 (<span class="font-weight-500">60</span>개월)</span>33,900<span class="cost-won">원</span></p>
+														</div>
+														<div class="display-block">
+															<p class="sale-cost display-block"><span class="cost-rental-title text-bold">총 렌탈료</span>890,000<span class="cost-won">원</span></p>
+														</div>
+													</div>
+												</div>
+												<div class="product-list-element text-center col-xs-6 col-md-3 col-lg-3" onclick="location.href='../static_code/view/product/productDetail.html'">
+													<div class="product-tumbnail-boxing">
+														<!-- 상품 이미지 -->
+														<div class="img-gray">
+															<img src="https://cdn-pro-web-151-224.cdn-nhncommerce.com/biontech_godomall_com/data/goods/20/09/36/1000000033/1000000033_detail_059.png" alt="TEXT" class="product-tumbnail-round">
+																<img src="https://view01.wemep.co.kr/wmp-sticker/34/202103/09/quwf6otxyamd.png" alt="이벤트" class="sale-event-icon">
+														</div>
+													</div>
+													<div class="product-name-boxing">
+														<!-- 상품 제목/설명 -->
+														<p class="name-more">정수는 물론 알칼리 이온수와 산성 이온수까지</p>
+														<p class="name">바이온텍 냉온 알칼리 이온수기 BTC-5004</p>
+													</div>
+													<div class="product-price-boxing">
+														<!-- 이벤트 상품 -->
+															<!-- 상품 가격 : 할인표시-->
+															<p class="cost">4,647,000<span class="cost-won">원</span></p>
+															<!-- 할인된 가격 -->
+															<p class="sale-cost">3,390,000<span class="cost-won">원</span></p>
+														
+														<div class="display-block">
+															<p class="sale-cost display-block"><span class="cost-rental-title">월 렌탈료 (<span class="font-weight-500">60</span>개월)</span>59,900<span class="cost-won">원</span></p>
+														</div>
+														<div class="display-block">
+															<p class="sale-cost display-block"><span class="cost-rental-title text-bold">총 렌탈료</span>23,340,000<span class="cost-won">원</span></p>
+														</div>
+													</div>
+													
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- ================ // 분리 section 6단 :: '기획상품' 컨텐츠 영역  ================ -->
+
+
+			<!-- ================ 분리 section 7단 :: '포토리뷰' 컨텐츠 영역  ================ -->
+			<section id="pageDivision">
+				<div class="container main-content-wrap display-fix-size"> <!-- 전체 wrap -->
+					<div class="row">	
+    					<div class="col-xs-12">
+							<div class="main-content-title display-inline"> <!-- 컨텐츠 상위 타이틀 영역 -->
+								<p class="main-titile">
+									<a class="cursor-default">포토리뷰</a>
+								</p>
+							</div>
+						</div>
+						<div class="col-xs-12">
+							<div class="row">
+								<div class="swiper mySwiperReview">
+										<div class="swiper-wrapper">
+											<div class="swiper-slide">
+												<div class="product-list-element review-wrapper product-list-element-height col-xs-6 col-md-3 col-lg-3">
+													<a onclick="#">
+														<div class="content">
+															<!-- 상품 이미지 -->
+															<div class="img-gray photo-thumb overflow-hidden">
+																<img src="https://www.bion-techmall.com/data/board/upload/goodsreview/6e6d668498258018" alt="TEST" class="product-tumbnail-round">
+															</div>
+															<!-- 상품 텍스트 -->
+															<div class="product-name-boxing review">
+																<p class="name-more">냉온알칼리 이온수기를 쓰다 보니 너무 맘에 들어 두집 살림이라 하나더 했네요^.^</p>
+																<p class="name">냉온알칼리 이온수기 BTC-5004</p>
+															</div>
+														</div>
+													</a>
+												</div>
+												<div class="product-list-element review-wrapper product-list-element-height col-xs-6 col-md-3 col-lg-3">
+													<a onclick="#">
+														<div class="content">
+															<!-- 상품 이미지 -->
+															<div class="img-gray photo-thumb overflow-hidden">
+																<img src="https://phinf.pstatic.net/checkout.phinf/20230629_174/1688035358300sxxUg_JPEG/20230629_191338.jpg?type=w640" alt="TEST" class="product-tumbnail-round">
+															</div>
+															<!-- 상품 텍스트 -->
+															<div class="product-name-boxing review">
+																<p class="name-more">기사 방문없이 셀프로 설치하니 편하네요</p>
+																<p class="name">바이온텍 이온수기 정품필터 원필터 BF-100-108</p>
+															</div>
+														</div>
+													</a>
+												</div>
+												<div class="product-list-element review-wrapper product-list-element-height col-xs-6 col-md-3 col-lg-3">
+													<a onclick="#">
+														<div class="content">
+															<!-- 상품 이미지 -->
+															<div class="img-gray photo-thumb overflow-hidden">
+																<img src="https://phinf.pstatic.net/checkout.phinf/20230324_127/16796425506550XRp0_JPEG/20230304_215440.jpg?type=w640" alt="TEST" class="product-tumbnail-round">
+															</div>
+															<!-- 상품 텍스트 -->
+															<div class="product-name-boxing review">
+																<p class="name-more">기사 방문없이 셀프로 설치하니 편하네요</p>
+																<p class="name">바이온텍 이온수기 정품필터 원필터 BF-100-108</p>
+															</div>
+														</div>
+													</a>
+												</div>
+												<div class="product-list-element review-wrapper product-list-element-height col-xs-6 col-md-3 col-lg-3">
+													<a onclick="#">
+														<div class="content">
+															<!-- 상품 이미지 -->
+															<div class="img-gray photo-thumb overflow-hidden">
+																<img src="https://phinf.pstatic.net/checkout.phinf/20211113_281/1636811857227hB23r_JPEG/review-attachment-2fc3eb99-bb33-4787-8c6c-29c43e4d95e3.jpeg?type=w640" alt="TEST" class="product-tumbnail-round">
+															</div>
+															<!-- 상품 텍스트 -->
+															<div class="product-name-boxing review">
+																<p class="name-more">냉편리하고 좋아요. 용량이 좀더 큰 모델도 있으면 좋겠네요!</p>
+																<p class="name">텀블러형 수소수기 BTH-101T 수소수 생성기</p>
+															</div>
+														</div>
+													</a>
+												</div>
+											</div>
+											<div class="swiper-slide">
+												<div class="product-list-element review-wrapper product-list-element-height col-xs-6 col-md-3 col-lg-3">
+													<a onclick="#">
+														<div class="content">
+															<!-- 상품 이미지 -->
+															<div class="img-gray photo-thumb overflow-hidden">
+																<img src="https://bion-techmall.com/data/board/upload/goodsreview/5a26396c6a161e54" alt="TEST" class="product-tumbnail-round">
+															</div>
+															<!-- 상품 텍스트 -->
+															<div class="product-name-boxing review">
+																<p class="name-more">이온수기 후기남겨봅니다😊</p>
+																<p class="name">냉온알칼리 이온수기 BTC-5004</p>
+															</div>
+														</div>
+													</a>
+												</div>
+												<div class="product-list-element review-wrapper product-list-element-height col-xs-6 col-md-3 col-lg-3">
+													<a onclick="#">
+														<div class="content">
+															<!-- 상품 이미지 -->
+															<div class="img-gray photo-thumb overflow-hidden">
+																<img src="https://phinf.pstatic.net/checkout.phinf/20210918_170/1631926696004d0lWp_JPEG/review-attachment-de23d8b3-08dd-4940-a7de-01efd222e9bd.jpeg?type=w640" alt="TEST" class="product-tumbnail-round">
+															</div>
+															<!-- 상품 텍스트 -->
+															<div class="product-name-boxing review">
+																<p class="name-more">어머니가 좋아하시네요</p>
+																<p class="name">텀블러형 수소수기 BTH-101T 수소수 생성기</p>
+															</div>
+														</div>
+													</a>
+												</div>
+												<div class="product-list-element review-wrapper product-list-element-height col-xs-6 col-md-3 col-lg-3">
+													<a onclick="#">
+														<div class="content">
+															<!-- 상품 이미지 -->
+															<div class="img-gray photo-thumb overflow-hidden">
+																<img src="https://phinf.pstatic.net/checkout.phinf/20230910_246/1694340394870ktPgk_JPEG/image.jpg?type=w640" alt="TEST" class="product-tumbnail-round">
+															</div>
+															<!-- 상품 텍스트 -->
+															<div class="product-name-boxing review">
+																<p class="name-more">알칼리 산성 색깔변화는 확실하네요.</p>
+																<p class="name">pH테스트 시약 5ml (알칼리수/산성수 체크)</p>
+															</div>
+														</div>
+													</a>
+												</div>
+												<div class="product-list-element review-wrapper product-list-element-height col-xs-6 col-md-3 col-lg-3">
+													<a onclick="#">
+														<div class="content">
+															<!-- 상품 이미지 -->
+															<div class="img-gray photo-thumb overflow-hidden">
+																<img src="https://phinf.pstatic.net/checkout.phinf/20230814_294/1691987019704V2paU_JPEG/1691987011320.jpg?type=w640" alt="TEST" class="product-tumbnail-round">
+															</div>
+															<!-- 상품 텍스트 -->
+															<div class="product-name-boxing review">
+																<p class="name-more">정품필터교체로 믿고 먹을수있어요.</p>
+																<p class="name">이온수기 정품필터 투필터용 1차 복합프리필터 BF-102-110</p>
+															</div>
+														</div>
+													</a>
+												</div>
+											</div>
+											<div class="swiper-slide">
+												<div class="product-list-element review-wrapper product-list-element-height col-xs-6 col-md-3 col-lg-3">
+													<a onclick="#">
+														<div class="content">
+															<!-- 상품 이미지 -->
+															<div class="img-gray photo-thumb overflow-hidden">
+																<img src="https://www.bion-techmall.com/data/board/upload/goodsreview/6e6d668498258018" alt="TEST" class="product-tumbnail-round">
+															</div>
+															<!-- 상품 텍스트 -->
+															<div class="product-name-boxing review">
+																<p class="name-more">냉온알칼리 이온수기를 쓰다 보니 너무 맘에 들어 두집 살림이라 하나더 했네요^.^</p>
+																<p class="name">냉온알칼리 이온수기 BTC-5004</p>
+															</div>
+														</div>
+													</a>
+												</div>
+												<div class="product-list-element review-wrapper product-list-element-height col-xs-6 col-md-3 col-lg-3">
+													<a onclick="#">
+														<div class="content">
+															<!-- 상품 이미지 -->
+															<div class="img-gray photo-thumb overflow-hidden">
+																<img src="https://phinf.pstatic.net/checkout.phinf/20230629_174/1688035358300sxxUg_JPEG/20230629_191338.jpg?type=w640" alt="TEST" class="product-tumbnail-round">
+															</div>
+															<!-- 상품 텍스트 -->
+															<div class="product-name-boxing review">
+																<p class="name-more">기사 방문없이 셀프로 설치하니 편하네요</p>
+																<p class="name">바이온텍 이온수기 정품필터 원필터 BF-100-108</p>
+															</div>
+														</div>
+													</a>
+												</div>
+												<div class="product-list-element review-wrapper product-list-element-height col-xs-6 col-md-3 col-lg-3">
+													<a onclick="#">
+														<div class="content">
+															<!-- 상품 이미지 -->
+															<div class="img-gray photo-thumb overflow-hidden">
+																<img src="https://phinf.pstatic.net/checkout.phinf/20230324_127/16796425506550XRp0_JPEG/20230304_215440.jpg?type=w640" alt="TEST" class="product-tumbnail-round">
+															</div>
+															<!-- 상품 텍스트 -->
+															<div class="product-name-boxing review">
+																<p class="name-more">기사 방문없이 셀프로 설치하니 편하네요</p>
+																<p class="name">바이온텍 이온수기 정품필터 원필터 BF-100-108</p>
+															</div>
+														</div>
+													</a>
+												</div>
+												<div class="product-list-element review-wrapper product-list-element-height col-xs-6 col-md-3 col-lg-3">
+													<a onclick="#">
+														<div class="content">
+															<!-- 상품 이미지 -->
+															<div class="img-gray photo-thumb overflow-hidden">
+																<img src="https://phinf.pstatic.net/checkout.phinf/20211113_281/1636811857227hB23r_JPEG/review-attachment-2fc3eb99-bb33-4787-8c6c-29c43e4d95e3.jpeg?type=w640" alt="TEST" class="product-tumbnail-round">
+															</div>
+															<!-- 상품 텍스트 -->
+															<div class="product-name-boxing review">
+																<p class="name-more">냉편리하고 좋아요. 용량이 좀더 큰 모델도 있으면 좋겠네요!</p>
+																<p class="name">텀블러형 수소수기 BTH-101T 수소수 생성기</p>
+															</div>
+														</div>
+													</a>
+												</div>
+											</div>
+											<div class="swiper-slide">
+												<div class="product-list-element review-wrapper product-list-element-height col-xs-6 col-md-3 col-lg-3">
+													<a onclick="#">
+														<div class="content">
+															<!-- 상품 이미지 -->
+															<div class="img-gray photo-thumb overflow-hidden">
+																<img src="https://bion-techmall.com/data/board/upload/goodsreview/5a26396c6a161e54" alt="TEST" class="product-tumbnail-round">
+															</div>
+															<!-- 상품 텍스트 -->
+															<div class="product-name-boxing review">
+																<p class="name-more">이온수기 후기남겨봅니다😊</p>
+																<p class="name">냉온알칼리 이온수기 BTC-5004</p>
+															</div>
+														</div>
+													</a>
+												</div>
+												<div class="product-list-element review-wrapper product-list-element-height col-xs-6 col-md-3 col-lg-3">
+													<a onclick="#">
+														<div class="content">
+															<!-- 상품 이미지 -->
+															<div class="img-gray photo-thumb overflow-hidden">
+																<img src="https://phinf.pstatic.net/checkout.phinf/20210918_170/1631926696004d0lWp_JPEG/review-attachment-de23d8b3-08dd-4940-a7de-01efd222e9bd.jpeg?type=w640" alt="TEST" class="product-tumbnail-round">
+															</div>
+															<!-- 상품 텍스트 -->
+															<div class="product-name-boxing review">
+																<p class="name-more">어머니가 좋아하시네요</p>
+																<p class="name">텀블러형 수소수기 BTH-101T 수소수 생성기</p>
+															</div>
+														</div>
+													</a>
+												</div>
+												<div class="product-list-element review-wrapper product-list-element-height col-xs-6 col-md-3 col-lg-3">
+													<a onclick="#">
+														<div class="content">
+															<!-- 상품 이미지 -->
+															<div class="img-gray photo-thumb overflow-hidden">
+																<img src="https://phinf.pstatic.net/checkout.phinf/20230910_246/1694340394870ktPgk_JPEG/image.jpg?type=w640" alt="TEST" class="product-tumbnail-round">
+															</div>
+															<!-- 상품 텍스트 -->
+															<div class="product-name-boxing review">
+																<p class="name-more">알칼리 산성 색깔변화는 확실하네요.</p>
+																<p class="name">pH테스트 시약 5ml (알칼리수/산성수 체크)</p>
+															</div>
+														</div>
+													</a>
+												</div>
+												<div class="product-list-element review-wrapper product-list-element-height col-xs-6 col-md-3 col-lg-3">
+													<a onclick="#">
+														<div class="content">
+															<!-- 상품 이미지 -->
+															<div class="img-gray photo-thumb overflow-hidden">
+																<img src="https://phinf.pstatic.net/checkout.phinf/20230814_294/1691987019704V2paU_JPEG/1691987011320.jpg?type=w640" alt="TEST" class="product-tumbnail-round">
+															</div>
+															<!-- 상품 텍스트 -->
+															<div class="product-name-boxing review">
+																<p class="name-more">정품필터교체로 믿고 먹을수있어요.</p>
+																<p class="name">이온수기 정품필터 투필터용 1차 복합프리필터 BF-102-110</p>
+															</div>
+														</div>
+													</a>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+					</div>
+				</div>
+				<script type="text/javascript">
+					var swiperMain = new Swiper(".mySwiperReview", {
+						pagination: {
+						el: ".swiper-pagination",
+						clickable: false,
+						},
+						autoplay: {
+							delay: 2300,
+							disableOnInteraction: false,
+						},
+					});
+				</script>
+			</section>
+			<!-- ================ // 분리 section 7단 :: '포토리뷰' 컨텐츠 영역  ================ -->
+
+			<!-- ================ 분리 section 8단 :: 고객센터 컨텐츠 영역  ================ -->
+			<section id="pageDivision" class="main-cust-center">
+				<div class="cust-center-content-wrap col-xs-12 no-padding">
+    				<div class="cust-center-preboxing">
+    					<div class="cust-contain display-fix-size container">
+    						<div class="row">
+	    						<div class="center-content-element customer-center col-xs-12 col-md-4">
+	    							<div class="center-title">
+	    								<p class="xs-text-medium">고객센터</p>
+	    							</div>
+	    							<div class="center-content-wrap">
+										<div class="center-content">
+											<div class="center-content-size">
+	        									<p class="center-icon"><img src="./assets/img/main-content/cust-center-icon-01.png" alt="고객센터 아이콘"></p>
+	        									<p class="center-main-number" href="tel:1899-9336">1899-9336</p>
+	        									<p class="center-time">평일 AM 09:00 - PM 06:00/ 토요일 AM 09:00 - PM 02:00<br></p>
+	        									<p class="center-none-notc">일요일/공휴일은 휴무</p>
+	        								</div>
+	    								</div>
+									</div>
+								</div>
+								<div class="center-content-element customer-center col-xs-12 col-md-4">
+	    							<div class="center-title">
+	    								<p class="xs-text-medium">소비자 센터</p>
+	    							</div>
+	    							<div class="center-content-wrap">
+										<div class="center-content">
+											<div class="center-content-size">
+												<div class="icon-content-boxing col-xs-6">
+	        										<p class="center-icon"><a onclick="location.href='faqList.do'"><img src="./assets/img/main-content/cust-center-icon-02.png" alt="고객센터 아이콘"></a></p>
+				    								<p class="icon-content-text">FAQ</p>
+	        									</div>
+	        									<div class="icon-content-boxing col-xs-6">
+	        										<p class="center-icon"><a onclick="Board.writeBoard('qna_nonecustomer')"><img src="./assets/img/main-content/cust-center-icon-03.png" alt="1:1문의 아이콘"></a></p>
+				    								<p class="icon-content-text">1:1문의</p>
+	        									</div>
+	        									<div class="icon-content-boxing col-xs-6">
+	        										<p class="center-icon"><a onclick="location.href='afterService.do'"><img src="./assets/img/main-content/cust-center-icon-08.png" alt="A/S 및 설치 방문예약 아이콘"></a></p>
+				    								<p class="icon-content-text">A/S 및 설치 방문예약</p>
+	        									</div>
+	        									<div class="icon-content-boxing col-xs-6">
+	        										<p class="center-icon"><a onclick="Board.writeBoard('qna_nonecustomer')"><img src="./assets/img/main-content/cust-center-icon-09.png" alt="기업/관공서 문의"></a></p>
+				    								<p class="icon-content-text">기업/관공서 문의</p>
+	        									</div>
+												<!-- <div class="icon-content-boxing">
+	        										<p class="center-icon"><a onclick="Board.writeBoard('qna_nonecustomer')"><img src="/assets/img/main-content/cust-center-icon-02.png" alt="고객센터 아이콘"></a></p>
+	        										<p class="icon-content-text"><a onclick="Board.writeBoard('qna_nonecustomer')">대량구매 문의</a></p>
+	        									</div>
+	        									<div class="icon-content-boxing">
+	        										<p class="center-icon"><a onclick="Board.writeBoard('qna_nonecustomer')"><img src="/assets/img/main-content/cust-center-icon-02.png" alt="고객센터 아이콘"></a></p>
+	        										<p class="icon-content-text"><a onclick="Board.writeBoard('qna_nonecustomer')">제휴 문의</a></p>
+	        									</div> -->
+	        								</div>
+	    								</div>
+									</div>
+								</div>
+								<div class="center-content-element customer-center col-xs-12 col-md-4">
+	    							<div class="center-title">
+	    								<p class="xs-text-medium">커뮤니티</p>
+	    							</div>
+	    							<div class="center-content-wrap">
+										<div class="center-content">
+											<div class="center-content-size">
+	        									<div class="icon-content-boxing col-xs-6">
+	        										<p class="center-icon"><a onclick="Board.writeBoard('qna_nonecustomer')"><img src="./assets/img/main-content/cust-center-icon-03.png" alt="제품 문의"></a></p>
+	        										<p class="icon-content-text"><a onclick="Board.writeBoard('qna_nonecustomer')">제품 문의</a></p>
+	        									</div>
+	        									<div class="icon-content-boxing col-xs-6">
+	        										<p class="center-icon"><a href="companyInfo.do"><img src="./assets/img/main-content/cust-center-icon-04.png" alt="매장 안내"></a></p>
+	        										<p class="icon-content-text"><a href="companyInfo.do">회사 소개</a></p>
+	        									</div>
+	        									<div class="icon-content-boxing col-xs-6">
+	        										<p class="center-icon"><a onclick="openURL('deliveryInfo');"><img src="./assets/img/main-content/cust-center-icon-05.png" alt="배송 안내"></a></p>
+	        										<p class="icon-content-text"><a onclick="openURL('deliveryInfo');">배송/결제 안내</a></p>
+	        									</div>
+	        									<div class="icon-content-boxing col-xs-6">
+	        										<p class="center-icon"><a href="reviewList.do"><img src="./assets/img/main-content/cust-center-icon-06.png" alt="사용 후기"></a></p>
+	        										<p class="icon-content-text"><a href="reviewList.do">사용 후기</a></p>
+	        									</div>
+	        								</div>
+	    								</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- ================ 분리 section 8단 :: 고객센터 컨텐츠 영역  ================ -->
+
+			<!-- ================ 분리 section 9단 :: '배너' 컨텐츠 영역  ================ -->
+			<section id="pageDivision" class="banner-section xs-display-none">
+				<div class="container-fluid main-content-wrap display-fix-size no-padding"> <!-- 전체 wrap -->
+					<div class="">
+						<div class="col-sm-6 no-padding">
+							<a href="../static_code/view/product/productList.html"><img src="./assets/img/banner_img/best_banner_01.jpeg"></a>
+						</div>
+						<div class="col-sm-6 no-padding">
+							<a href="../static_code/view/product/productList.html"><img src="./assets/img/banner_img/best_banner_02.jpeg"></a>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- ================ // 분리 section 9단 :: '배너' 컨텐츠 영역  ================ -->
+
+			<section class="position-fixed bottom-0 z-index-max width-100 md-display-none">
+				<div class="container-fluid">
+					<div class="row">
+						<div class="col-md-12 no-padding">
+							<div class="accordion accordion-lg accordion-active-has-fill accordion-body-bordered accordion-expander-left no-margin" id="accordion-10" role="tablist">
+								<div class="accordion-item panel no-margin border-none active">
+									<div class="accordion-heading width-55px display-block margin-auto bg-main" role="tab" id="accordion-10-heading-1">
+										<h4 class="accordion-title font-size-22 line-height-none">
+											<a class="no-padding height-35px" data-toggle="collapse" data-parent="#accordion-10" href="#accordion-10-panel-1" aria-expanded="true" aria-controls="accordion-10-panel-1">
+												<span class="accordion-expander ranslateX-50 left-40p text-white">
+													<i class="fa fa-angle-up"></i>
+													<i class="fa fa-angle-down"></i>
+												</span>
+											</a>
+										</h4>
+									</div><!-- /.accordion-heading -->
+									<div id="accordion-10-panel-1" class="accordion-collapse collapse in" role="tabpanel" aria-labelledby="accordion-10-heading-1" aria-expanded="true" style="background: #222;padding: 20px 0;">
+										<div class="container">
+											<div class="row">
+												<div class="col-md-2">
+													<div class="display-inline-block">
+															<div class="display-flex">
+															<h4 class="text-white margin-20px-right no-margin-tb"><span class="fa fa-headphones line-height-55"></span></h4>
+															<div>
+																<h5 class="no-margin text-white">제품상담</h5>
+																<h4 class="no-margin text-white">1899-9336</h4>
+															</div>
+														</div>
+													   </div>
+												</div>
+												<form id="footerForm" class="ld_sf_form" name="mc-embedded-subscribe-form" method="post">
+												<div class="col-md-2 no-padding-right">
+													<input type="text" class="ld_sf_text bg-gray height-55px width-100 border-radius-5px"  name="name" placeholder="이름">
+												</div>
+												<div class="col-md-3">
+														<input type="text" class="ld_sf_text bg-gray height-55px width-100 border-radius-5px"  name="phone" onkeyup="this.value=this.value.replace(/[^0-9]/g,'');" placeholder="휴대폰">
+												</div>
+												<div class="col-md-2 no-padding-left">
+													<button class="height-55px width-100 bg-main text-white border-radius-5px" type="button" onclick="footerSend()">
+														<span class="submit-text">신청하기</span>
+														<span class="ld-sf-spinner">
+															<span>Sending </span>
+														</span>
+													</button>
+												</div>
+												<div class="col-md-2">
+													<p class="multi-input-style-chk no-margin line-height-55">
+														<label><input type="checkbox" name="agreeOne" id="agreeOne"><a class="chk-package text-white line-height-50">개인정보 수집 이용 동의 </a></label>
+													</p>
+												</div>
+												</form>
+												<div class="col-md-1 access-wid">
+													<a class="text-sm-small-medium line-height-55 text-white padding-5px-tb padding-8px-lr border-all border-color-white" href="#">내용보기</a>
+													<div class="hover-popup">
+														<h5 class="no-margin-top">개인정보 수집·이용 동의</h5>
+														 <p class="text-sm-small-medium">바이온텍의 가입상품 신청을 받기 위해 개인정보를 수집/이용하는 것에 동의 합니다.</p>
+														 <ul class="text-sm-small-medium">
+															 <li><span>1.</span>"수집항목 : 이름, 연락처"</li>
+															 <li><span>2.</span>"수집 및 이용목적 : 바이온텍 상품가입 상담"</li>
+															 <li><span>3.</span>"보유 및 이용기간 : 상담완료/정보제공 목적달성 시 삭제"</li>
+														 </ul>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>	
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+	</div>
+
+	<div id="footer"></div>
+	
+	
+</body>
+
+
+
+<!-- js -->
+
+
+<script type="text/javascript" src="./assets/js/vendor/modernizr.min.js"></script>
+<!--<script type="text/javascript" src="./assets/js/vendor/jquery.min.js"></script>	-->
+<script type="text/javascript" src="./assets/js/vendor/jquery.js"></script>
+<script type="text/javascript" src="./assets/js/vendor/theme-vendors.js"></script>	
+<script type="text/javascript" src="./assets/js/vendor/theme.min.js"></script>	
+
+<script type="text/javascript" src="./assets/js/vendor/fresco/js/fresco.js"></script>
+
+<script type="text/javascript" src="./assets/js/common.js"></script>	
+<script type="text/javascript">
+	$(function() {
+		$("#header").load('./view/include/header.html');
+		$("#footer").load('./view/include/footer.html');
+	});
+</script>
+</html>

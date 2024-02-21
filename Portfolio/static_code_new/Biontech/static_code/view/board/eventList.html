@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>바이온텍</title>
+	<div id="header"></div>
+	<!-- css -->
+	<link href="https://fonts.googleapis.com/css?family=Roboto%7cRubik:300,400" rel="stylesheet">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="../../assets/css/assets_css/theme-vendors.css">
+	<link rel="stylesheet" type="text/css" href="../../assets/css/assets_css/reset.css">
+	<link rel="stylesheet" type="text/css" href="../../assets/css/assets_css/theme.css">
+	<link rel="stylesheet" type="text/css" href="../../assets/css/vendor/fresco/css/fresco.css">
+	<link rel="stylesheet"  href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
+	<!-- js -->
+		<!-- Swiper JS -->		
+	<script type="text/javascript" src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+</head>
+<body class="woocommerce single">
+	<div id="wrap" class="no-padding-top">
+        <div class="container-fluid no-padding">
+            <div class="width-100 margin-40px-bottom">
+                <img src="../../assets/img/banner_img/event_banner_img.jpeg" alt="이벤트 타이틀 이미지">
+            </div>
+        </div>
+        <div class="container">
+               <!-- ================ 분리 section 1단 :: 타이틀 영역  ================ -->
+               <section class="paging-head-content-wrap">
+                   <!-- 공통 타이틀 스타일 (title-style-short) -->
+                   <div class="title-contain-short">
+                       <h1 class="title-style title-style-middle-regular title-dark-color">이벤트</h1>
+                       <h2 class="title-style title-style-middle-medium title-sub-dark-color">프로모션, SNS이벤트 등 다양한 이벤트와 풍성한 혜택을 만나보세요.</h2>
+                   </div>
+            </section>
+            <!-- ================ // 분리 section 1단 :: 타이틀 영역  ================ -->
+               <!-- ================ 분리 section 2단 :: 상품 상세정보 영역  ================ -->
+               <section class="detail-paging-expl-content-wrap">
+                   <div>
+                       <!-- tab 버튼 영역 -->
+                    <div class="shop--element-nav-tabs"> 
+                        <div class="woocommerce-tabs shop-tabs-style tabs-value-three wc-tabs-wrapper">
+                            <div class="tabs wc-tabs">	
+                                <div class="tab-content-wrap">
+                                    <ul class="tabs-nav" role="tablist">
+                                        <li class="description_tab active" id="tab-title-event-prog">
+                                            <a role="tab" data-toggle="tab" href="#tab-event-prog" aria-expanded="true">진행중인 이벤트</a>
+                                        </li>
+                                        <li class="additional_information_tab" id="tab-title-closed-event">
+                                            <a role="tab" data-toggle="tab" href="#tab-closed-event" aria-expanded="false">종료된 이벤트</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>		
+                    </div> 
+                    <!-- // tab 버튼 영역 -->		
+                            
+                    <div class="shop--element-product-list">
+                        <div class="tabs-content">
+                            <!-- 1. 탭(진행중인 이벤트) 본문 -->
+                            <div class="tabs-pane fade active in" id="tab-event-prog"> 
+                                <!-- 탭 내부 본문 setction -->
+                                <div class="thumbnail-content-wrap row">
+                                    
+                                        
+
+                                        
+                                        <div class="product-list-element event-thumbnail col-xs-12 col-sm-6 col-md-4 col-lg-3"> <!-- 반복) 이벤트 목록 레이아웃 -->
+                                            <div class="product-tumbnail-boxing"> <!-- 상품 이미지 -->
+                                                <p><a href="eventView.do?idx=${i.eb_idx }"><img src="https://godomall.speedycdn.net/7796c0b08839ed1fb3e5004959037cbe/event/0260f74cd0435360845" alt="${i.eb_title }"></a></p>
+                                            </div>
+                                            <div class="product-name-boxing"> <!-- 상품 제목/설명 -->
+                                                <p class="name"><a href="eventView.do?idx=${i.eb_idx }">바이온텍 10월 이벤트</a></p>
+                                                <span><strong class="mr-2">이벤트기간</strong>2023.10.01 ~ 2023.10.31 </span>
+                                            </div>
+                                        </div>
+                                        <div class="product-list-element event-thumbnail col-xs-12 col-sm-6 col-md-4 col-lg-3"> <!-- 반복) 이벤트 목록 레이아웃 -->
+                                            <div class="product-tumbnail-boxing"> <!-- 상품 이미지 -->
+                                                <p><a href="eventView.do?idx=${i.eb_idx }"><img src="https://www.bion-techmall.com/data/board/upload/event/9b4524c51a76c78c" alt="${i.eb_title }"></a></p>
+                                            </div>
+                                            <div class="product-name-boxing"> <!-- 상품 제목/설명 -->
+                                                <p class="name"><a href="eventView.do?idx=${i.eb_idx }">바이온텍 알칼리 이온수기 최저가 제휴할인 EVENT!</a></p>
+                                                <span><strong class="mr-2">이벤트기간</strong>2020.12.25 ~ 2021.01.31</span>
+                                            </div>
+                                        </div>
+                                        <div class="product-list-element event-thumbnail col-xs-12 col-sm-6 col-md-4 col-lg-3"> <!-- 반복) 이벤트 목록 레이아웃 -->
+                                            <div class="product-tumbnail-boxing"> <!-- 상품 이미지 -->
+                                                <p><a href="eventView.do?idx=${i.eb_idx }"><img src="https://www.bion-techmall.com/data/board/upload/event/bc56da0d5da6107c" alt="${i.eb_title }"></a></p>
+                                            </div>
+                                            <div class="product-name-boxing"> <!-- 상품 제목/설명 -->
+                                                <p class="name"><a href="eventView.do?idx=${i.eb_idx }">설레는 바이온텍, 설 맞이 이벤트
+</a></p>
+                                                <span><strong class="mr-2">이벤트기간</strong>2021.02.01 ~ 2021.02.28</span>
+                                            </div>
+                                        </div>
+                                        <div class="product-list-element event-thumbnail col-xs-12 col-sm-6 col-md-4 col-lg-3"> <!-- 반복) 이벤트 목록 레이아웃 -->
+                                            <div class="product-tumbnail-boxing"> <!-- 상품 이미지 -->
+                                                <p><a href="eventView.do?idx=${i.eb_idx }"><img src="https://www.bion-techmall.com/data/board/upload/event/62a8118c782adbe8" alt="${i.eb_title }"></a></p>
+                                            </div>
+                                            <div class="product-name-boxing"> <!-- 상품 제목/설명 -->
+                                                <p class="name"><a href="eventView.do?idx=${i.eb_idx }">Cj홈쇼핑 론칭 기념 10월 푸짐한 이벤트
+</a></p>
+                                                <span><strong class="mr-2">이벤트기간</strong>2020.10.01 ~ 2020.10.31</span>
+                                            </div>
+                                        </div>
+
+                                        
+
+                                        
+
+                                         <!-- // 반복) 이벤트 목록 레이아웃 -->
+                                        
+                                    
+                                </div>
+                                <!-- // 탭 내부 본문 section -->
+                            </div>
+                            <!-- // 1. 탭(진행중인 이벤트) 본문 -->
+                                            
+                            <!-- 2. 탭(종료된 이벤트) 본문 -->
+                            <div class="tabs-pane fade" id="tab-closed-event"> 
+                                <div class="thumbnail-content-wrap row">
+                                    
+                                        <div class="product-list-element event-thumbnail col-xs-12 col-sm-6 col-md-4 col-lg-3"> <!-- 반복) 이벤트 목록 레이아웃 -->
+                                            <div class="product-tumbnail-boxing"> <!-- 상품 이미지 -->
+                                                <p><a href="eventView.do?idx=${i.eb_idx }"><img src="https://www.bion-techmall.com/data/board/upload/event/1033b285f65d26f8" alt="${i.eb_title }"></a></p>
+                                            </div>
+                                            <div class="product-name-boxing"> <!-- 상품 제목/설명 -->
+                                                <p class="name"><a href="eventView.do?idx=${i.eb_idx }">[종료] 바이온텍 정품필터 10% 할인 이벤트</a></p>
+                                                <span><strong class="mr-2">이벤트기간</strong>2020.08.01 ~ 2020.08.31</span>
+                                            </div>
+                                        </div> <!-- // 반복) 이벤트 목록 레이아웃 -->
+                                        
+                                    
+                                 </div>
+                            </div>
+                            <!-- // 2. 탭(종료된 이벤트) 본문 -->
+                        </div>
+                    </div>
+                   </div>
+                   <div class="board-type-input margin-50px-top margin-auto-lr width-fit-content">
+                       <span class="input-date select-span position-relative">
+                        <select id="time" place="" class="input-date" onchange="search();">
+                            <option value="">기간</option>
+                            <option value="week">일주일</option>
+                            <option value="month">한달 </option>
+                        </select>
+                        <span class="select-icon fa fa-angle-down"></span>
+                    </span>
+                    <span class="input-title select-span position-relative">
+                        <select id="input_type" place="" class="input-title" onchange="search();">
+                            <option value="title">제목</option>
+                            <option value="content">내용</option>
+                            <option value="ticon">제목+내용</option>
+                        </select>
+                        <span class="select-icon fa fa-angle-down"></span>
+                    </span>
+                    <span class="input-search">
+                        <input type="text" id="input" class="input-search" value="">
+                        <button type="button" class="search-btn" onclick="search();">검색</button>
+                    </span>
+                   </div>
+               </section>
+               <!-- ================ // 분리 section 2단 :: 상품 상세정보 영역  ================ --></div>
+
+<!-- js -->
+
+
+<script type="text/javascript" src="../../assets/js/vendor/modernizr.min.js"></script>
+<!--<script type="text/javascript" src="./assets/js/vendor/jquery.min.js"></script>	-->
+<script type="text/javascript" src="../../assets/js/vendor/jquery.js"></script>
+<script type="text/javascript" src="../../assets/js/vendor/theme-vendors.js"></script>	
+<script type="text/javascript" src="../../assets/js/vendor/theme.min.js"></script>	
+
+<script type="text/javascript" src="../../assets/js/vendor/fresco/js/fresco.js"></script>
+
+<script type="text/javascript" src="../../assets/js/common.js"></script>	
+<script type="text/javascript">
+	$(function() {
+		$("#header").load('../include/header.html');
+		$("#footer").load('../include/footer.html');
+	});
+</script>
+
+</div>
+<div id="footer"></div>
+</body>
+<!-- js -->
+
+
+<script type="text/javascript" src="../../assets/js/vendor/modernizr.min.js"></script>
+<!--<script type="text/javascript" src="./assets/js/vendor/jquery.min.js"></script>	-->
+<script type="text/javascript" src="../../assets/js/vendor/jquery.js"></script>
+<script type="text/javascript" src="../../assets/js/vendor/theme-vendors.js"></script>	
+<script type="text/javascript" src="../../assets/js/vendor/theme.min.js"></script>	
+
+<script type="text/javascript" src="../../assets/js/vendor/fresco/js/fresco.js"></script>
+
+<script type="text/javascript" src="../../assets/js/common.js"></script>	
+<script type="text/javascript">
+	$(function() {
+		$("#header").load('../include/header.html');
+		$("#footer").load('../include/footer.html');
+	});
+</script>
+</html>

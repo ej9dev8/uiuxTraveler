@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>FORD LMS | 온라인 강의</title>
+	<div id="headerCopy"></div> 
+	<div id="navCopy"></div> 
+	<!-- css -->
+	<link rel="shortcut icon" href="../../assets/image/icon/Favicon/favi-cust16(2).ico">
+    <link rel="icon" href="../../assets/image/icon/Favicon/favi-cust16(2).ico">
+    
+    <link rel="stylesheet" href="../../assets/css/font-awesome.min.css" />
+	<link rel="stylesheet" href="../../assets/css/themify-icons.css" />
+	<link rel="stylesheet" type="text/css" href="../../assets/css/bootstrap.min.css" />
+	<link rel="stylesheet" type="text/css" href="../../assets/css/reset.css">
+	<link rel="stylesheet" type="text/css" href="../../assets/css/common.css">
+	<link rel="stylesheet" type="text/css" href="../../assets/css/style.css">
+	<link rel="stylesheet" type="text/css" href="../../assets/css/mr_style.css">
+	<!-- js -->
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+	<script type="text/javascript" src="../../assets/js/vendor/jquery.js"></script>
+</head>
+<body>
+	<!-- section -->
+	<section class="ford_banner">
+		<div class="banner_wrap">
+			<div class="banner_content">
+				<h3 class="text-center text-white font-main">온라인 강의</h3>
+				<h1 class="text-center text-white font-main">브랜드</h1>
+				<hr>
+			</div>
+		</div>
+	</section>
+	<section class="ford-section-wrap">
+ 	<section class="online-detail no-padding-top padding-50px-bottom sm-padding-30px-top">
+		<div class="container">
+			<div class="row"> 
+				<div class="col-md-8">
+					<div class="title-line">
+						<h3 class="title-line-name font-main-kr">과정상세</h3>
+    					<hr class="title-line-hr">
+					</div>
+    				<div class="row"> 
+    					<div class="col-xs-4">
+							<img src="https://storage.googleapis.com/static.fastcampus.co.kr/prod/uploads/202305/063258-494/%E1%84%8F%E1%85%B5%E1%84%8B%E1%85%AF%E1%84%83%E1%85%B3%E1%84%92%E1%85%A7%E1%86%BC.webp" alt="온라인 강의 썸네일 이미지">
+						</div> 
+						<div class="col-xs-8">
+    						<p class="font-main-kr">과정 제목</p>
+    						<h2 class="font-main-kr">'혁신적 교육 프로그램을 통한 진로 촉진' 개론</h2>
+    						<div class="class-info">
+    							<p class="font-main-kr">신청기간 : 2023.1.18 ~ 2023.03.13</p>
+    							<p class="font-main-kr">교육기간 : 2023.04.01 ~ 2024.03.13</p>
+    							<p class="font-main-kr">강의 수 : 총 18강</p>
+    						</div>
+						</div>
+					</div>
+				</div>
+				
+				<!-- 강의 미수료 시 -->
+				<!-- <div class="col-md-4">
+					<div class="title-line">
+						<h3 class="title-line-name font-main-kr">학습 진도율</h3>
+    					<hr class="title-line-hr">
+					</div>
+   			 		<h1 class="class-percent-text text-center font-main-kr">0%</h1>
+    				<div class="class-percent-content">
+        				<div style="width: 0%"></div>
+    				</div>
+    				<p class="class-percent-ment font-main-kr">수료조건 : 100% 이상 학습</p>
+					<div class="class-percent-btn">
+						<button class="font-main-kr width-100" onclick="applyLecture('${detail.l_idx}', '${login.m_idx}')">수강신청</button> -->
+						<!-- // <button class="font-main-kr">참고자료</button> -->
+					<!-- </div>
+				</div>-->
+
+
+				<!-- 강의 수료 시 -->
+				<div class="col-md-4">
+					<div class="title-line">
+						<h3 class="title-line-name font-main-kr">학습 진도율</h3>
+    					<hr class="title-line-hr">
+					</div>
+   			 		<h1 class="class-percent-text text-center font-main-kr">73%</h1>
+    				<div class="class-percent-content">
+        				<div style="width: 73%"></div>
+    				</div>
+    				<p class="class-percent-ment font-main-kr"><b>수료조건 : 100% 이상 학습</b></p>
+					<div class="class-percent-btn">
+						<button value="팝업창 호출" onclick="showPopup();" class="font-main-kr">학습하기</button>
+						<button class="font-main-kr" onclick="showFile()">참고자료</button>
+					</div>
+				</div>
+				</c:if>
+			</div>
+		</div>
+	</section>
+	<section class="class-table padding-50px-top no-padding-bottom">
+    	<div class="container">
+    		<!-- <div class="row">
+        		<div class="col-md-2">
+    				<p class="font-main-kr">알림사항</p>
+				</div>
+        		<div class="col-md-10">
+					<p class="font-main-kr"><span class="notice-text font-weight-500">학습 안내 독려의 수신 여부 설정은 학습알림설정 메뉴를 이용하세요.</span></p>
+				</div>
+    		</div> -->
+    		<div class="class-table-content">
+				 <h3 class="font-main-kr">학습하기</h3>
+    			<table class="table table-border-box accordion" id="accordionExample">
+        			<thead>
+            			<tr class="font-main-kr">
+                			<th style="width: 70px;">순서</th>
+                			<th>강좌 제목</th>
+                			<th style="width: 300px;">강좌 정보</th>
+                			<th style="width: 100px;">첨부파일</th>
+                			<th style="width: 100px;">시험</th>
+                			<th style="width: 200px;">차시</th>
+            			</tr>
+        			</thead>
+        			<tbody class="font-main-kr accordion-item">
+            			<tr>
+                			<td>1</td>
+                			<td class="text-left">Part1. 오늘날의 기획 트렌드</td>
+                			<td>Intro</td>
+               				<td>
+               					<a href="javascript:showFile();" class="btn btn-sm btn-gray">다운로드</a>
+               				</td>
+               				<td>
+								   <a href="javascript:;" target="" class="btn btn-sm btn-submit">시험완료</a>
+							</td>
+                			<td>
+                				총 <b>2</b> 차시 <button class="accordion-button collapsed btn btn-sm btn-utile margin-10px-left" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne"><i class="ti-menu margin-5px-right"></i> 차시목록</button>
+                			</td>
+						</tr> 
+            			<!-- 펼침목록 -->
+		    			<tr id="collapseOne" class="accordion-collapse collapse table-collapse" data-bs-parent="#accordionExample">
+		    				<td colspan="6" class="bg-light-gray">
+				    			<table class="table table-hover table-bordered table-condensed bg-light-gray">
+				        			<thead>
+				            			<tr class="">
+				                			<th style="width: 70px;">순서</th>
+				                			<th>차시 제목</th>
+				                			<th style="width: 300px;">차시 정보</th>
+				                			<th style="width: 100px;">진도율</th>
+				                			<th style="width: 100px;">학습 일시</th>
+				                			<th style="width: 120px;">학습하기</th>
+				            			</tr>
+				        			</thead>
+				        			<tbody class="font-main-kr">
+				            			<tr>
+				                			<td>1차시</td>
+				                			<td class="text-left">01. N가지 기획의 업무 범위 & 차이</td>
+				                			<td>-</td>
+				                			<td>100%</td>
+				                			<td>2023.06.13</td>
+				               				<td><a class="btn btn-sm btn-confirm" href="onDetail_popup.do?idx=${j.lr_idx}" target="_blank" data-toggle="tooltip" data-placement="left" title="새 창으로 열립니다.">학습 시작 <i class="ti-export margin-5px-left"></i></a></td>
+										</tr>
+										<tr>
+				                			<td>2차시</td>
+				                			<td class="text-left">02. 요즘 프로젝트 기획의 트렌드</td>
+				                			<td>-</td>
+				                			<td>100%</td>
+				                			<td>2023.06.13</td>
+				               				<td><a class="btn btn-sm btn-confirm" href="onDetail_popup.do?idx=${j.lr_idx}" target="_blank" data-toggle="tooltip" data-placement="left" title="새 창으로 열립니다.">학습 시작 <i class="ti-export margin-5px-left"></i></a></td>
+				            			</tr>
+				            		</tbody>
+				            	</table>
+							</td>
+						</tr>
+					</tbody>
+					<tbody class="font-main-kr accordion-item">
+            			<tr>
+                			<td>2</td>
+                			<td class="text-left">Part2. 역기획</td>
+                			<td>Basic</td>
+               				<td>
+               					<a href="javascript:showFile();" class="btn btn-sm btn-gray">다운로드</a>
+               				</td>
+               				<td>
+								<a onclick="showExam(${i.ls_idx})" target="" class="btn btn-sm btn-other">시험응시</a>
+							</td>
+                			<td>
+                				총 <b>5</b> 차시 <button class="accordion-button collapsed btn btn-sm btn-utile margin-10px-left" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo"><i class="ti-menu margin-5px-right"></i> 차시목록</button>
+                			</td>
+						</tr> 
+            			<!-- 펼침목록 -->
+		    			<tr id="collapseTwo" class="accordion-collapse collapse table-collapse show" data-bs-parent="#accordionExample">
+		    				<td colspan="6" class="bg-light-gray">
+				    			<table class="table table-hover table-bordered table-condensed bg-light-gray">
+				        			<thead>
+				            			<tr class="">
+				                			<th style="width: 70px;">순서</th>
+				                			<th>차시 제목</th>
+				                			<th style="width: 300px;">차시 정보</th>
+				                			<th style="width: 100px;">진도율</th>
+				                			<th style="width: 100px;">학습 일시</th>
+				                			<th style="width: 120px;">학습하기</th>
+				            			</tr>
+				        			</thead>
+				        			<tbody class="font-main-kr">
+				            			<tr>
+				                			<td>1차시</td>
+				                			<td class="text-left">01. 3단계 역기획이 필요한 이유</td>
+				                			<td>-</td>
+				                			<td>100%</td>
+				                			<td>2023.06.13</td>
+				               				<td><a class="btn btn-sm btn-confirm" href="onDetail_popup.do?idx=${j.lr_idx}" target="_blank" data-toggle="tooltip" data-placement="left" title="새 창으로 열립니다.">학습 시작 <i class="ti-export margin-5px-left"></i></a></td>
+										</tr>
+										<tr>
+				                			<td>2차시</td>
+				                			<td class="text-left">02. 11단계 역기획 Framework - 콘셉 편</td>
+				                			<td>-</td>
+				                			<td>100%</td>
+				                			<td>2023.06.13</td>
+				               				<td><a class="btn btn-sm btn-confirm" href="onDetail_popup.do?idx=${j.lr_idx}" target="_blank" data-toggle="tooltip" data-placement="left" title="새 창으로 열립니다.">학습 시작 <i class="ti-export margin-5px-left"></i></a></td>
+										</tr>
+										<tr>
+				                			<td>3차시</td>
+				                			<td class="text-left">03. 11단계 역기획 Framework - 설계 편</td>
+				                			<td>-</td>
+                                            <td>미수강</td>
+                                            <td>-</td>
+				               				<td><a class="btn btn-sm btn-confirm" href="onDetail_popup.do?idx=${j.lr_idx}" target="_blank" data-toggle="tooltip" data-placement="left" title="새 창으로 열립니다.">학습 시작 <i class="ti-export margin-5px-left"></i></a></td>
+										</tr>
+										<tr>
+				                			<td>4차시</td>
+				                			<td class="text-left">04. 11단계 역기획 Framework - 전략 편</td>
+				                			<td>-</td>
+                                            <td>미수강</td>
+                                            <td>-</td>
+				               				<td><a class="btn btn-sm btn-confirm" href="onDetail_popup.do?idx=${j.lr_idx}" target="_blank" data-toggle="tooltip" data-placement="left" title="새 창으로 열립니다.">학습 시작 <i class="ti-export margin-5px-left"></i></a></td>
+										</tr>
+										<tr>
+				                			<td>5차시</td>
+				                			<td class="text-left">05. [역기획 함께 해보기 1] 푸드 플랫폼 - 캐치테이블</td>
+				                			<td>-</td>
+                                            <td>미수강</td>
+                                            <td>-</td>
+				               				<td><a class="btn btn-sm btn-confirm" href="onDetail_popup.do?idx=${j.lr_idx}" target="_blank" data-toggle="tooltip" data-placement="left" title="새 창으로 열립니다.">학습 시작 <i class="ti-export margin-5px-left"></i></a></td>
+				            			</tr>
+				            		</tbody>
+				            	</table>
+							</td>
+						</tr>
+					</tbody>
+					<tbody class="font-main-kr accordion-item">
+            			<tr>
+                			<td>3</td>
+                			<td class="text-left">Part3. 케이스 스터디를 통한 문제해결</td>
+                			<td>Intermediate</td>
+               				<td>
+               					<a href="javascript:showFile();" class="btn btn-sm btn-gray">다운로드</a>
+               				</td>
+               				<td>
+								<a onclick="showExam(${i.ls_idx})" target="" class="btn btn-sm btn-other">시험응시</a>
+							</td>
+                			<td>
+                				총 <b>2</b> 차시 <button class="accordion-button collapsed btn btn-sm btn-utile margin-10px-left" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree"><i class="ti-menu margin-5px-right"></i> 차시목록</button>
+                			</td>
+						</tr> 
+            			<!-- 펼침목록 -->
+		    			<tr id="collapseThree" class="accordion-collapse collapse table-collapse" data-bs-parent="#accordionExample">
+		    				<td colspan="6" class="bg-light-gray">
+				    			<table class="table table-hover table-bordered table-condensed bg-light-gray">
+				        			<thead>
+				            			<tr class="">
+				                			<th style="width: 70px;">순서</th>
+				                			<th>차시 제목</th>
+				                			<th style="width: 300px;">차시 정보</th>
+				                			<th style="width: 100px;">진도율</th>
+				                			<th style="width: 100px;">학습 일시</th>
+				                			<th style="width: 120px;">학습하기</th>
+				            			</tr>
+				        			</thead>
+				        			<tbody class="font-main-kr">
+                                        <tr>
+                                            <td>1차시</td>
+                                            <td class="text-left">01. 앱스토어 TOP100 앱 살펴보기</td>
+                                            <td>-</td>
+                                            <td>미수강</td>
+                                            <td>-</td>
+                                            <td><a class="btn btn-sm btn-confirm" href="onDetail_popup.do?idx=${j.lr_idx}" target="_blank" data-toggle="tooltip" data-placement="left" title="새 창으로 열립니다.">학습 시작 <i class="ti-export margin-5px-left"></i></a></td>
+                                        </tr>
+                                        <tr>
+                                            <td>2차시</td>
+                                            <td class="text-left">02. 11가지 서비스 구조 단위로 앱스토어 TOP100 파헤쳐보기</td>
+                                            <td>-</td>
+                                            <td>미수강</td>
+                                            <td>-</td>
+                                            <td><a class="btn btn-sm btn-confirm" href="onDetail_popup.do?idx=${j.lr_idx}" target="_blank" data-toggle="tooltip" data-placement="left" title="새 창으로 열립니다.">학습 시작 <i class="ti-export margin-5px-left"></i></a></td>
+                                        </tr>
+                                    </tbody>
+				            	</table>
+							</td>
+						</tr>
+					</tbody>
+					<tbody class="font-main-kr accordion-item">
+            			<tr>
+                			<td>4</td>
+                			<td class="text-left">Part4. 나만의 아이디어로 MVP 만들기</td>
+                			<td>Advanced</td>
+               				<td>
+               					<a href="javascript:showFile();" class="btn btn-sm btn-gray">다운로드</a>
+               				</td>
+               				<td>
+								<a onclick="showExam(${i.ls_idx})" target="" class="btn btn-sm btn-other">시험응시</a>
+							</td>
+                			<td>
+                				총 <b>3</b> 차시 <button class="accordion-button collapsed btn btn-sm btn-utile margin-10px-left" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour"><i class="ti-menu margin-5px-right"></i> 차시목록</button>
+                			</td>
+						</tr> 
+            			<!-- 펼침목록 -->
+		    			<tr id="collapseFour" class="accordion-collapse collapse table-collapse" data-bs-parent="#accordionExample">
+		    				<td colspan="6" class="bg-light-gray">
+				    			<table class="table table-hover table-bordered table-condensed bg-light-gray">
+				        			<thead>
+				            			<tr class="">
+				                			<th style="width: 70px;">순서</th>
+				                			<th>차시 제목</th>
+				                			<th style="width: 300px;">차시 정보</th>
+				                			<th style="width: 100px;">진도율</th>
+				                			<th style="width: 100px;">학습 일시</th>
+				                			<th style="width: 120px;">학습하기</th>
+				            			</tr>
+				        			</thead>
+				        			<tbody class="font-main-kr">
+                                        <tr>
+                                            <td>1차시</td>
+                                            <td class="text-left">01. 머릿 속 아이디어를 현실로 만드는 방법 : MVP</td>
+                                            <td>-</td>
+                                            <td>미수강</td>
+                                            <td>-</td>
+                                            <td><a class="btn btn-sm btn-confirm" href="onDetail_popup.do?idx=${j.lr_idx}" target="_blank" data-toggle="tooltip" data-placement="left" title="새 창으로 열립니다.">학습 시작 <i class="ti-export margin-5px-left"></i></a></td>
+                                        </tr>
+                                        <tr>
+                                            <td>2차시</td>
+                                            <td class="text-left">02. [MVP 직접 만들어보기] 아이디어 1</td>
+                                            <td>-</td>
+                                            <td>미수강</td>
+                                            <td>-</td>
+                                            <td><a class="btn btn-sm btn-confirm" href="onDetail_popup.do?idx=${j.lr_idx}" target="_blank" data-toggle="tooltip" data-placement="left" title="새 창으로 열립니다.">학습 시작 <i class="ti-export margin-5px-left"></i></a></td>
+                                        </tr>
+                                        <tr>
+                                            <td>3차시</td>
+                                            <td class="text-left">03. [[MVP 직접 만들어보기] 아이디어 2</td>
+                                            <td>-</td>
+                                            <td>미수강</td>
+                                            <td>-</td>
+                                            <td><a class="btn btn-sm btn-confirm" href="onDetail_popup.do?idx=${j.lr_idx}" target="_blank" data-toggle="tooltip" data-placement="left" title="새 창으로 열립니다.">학습 시작 <i class="ti-export margin-5px-left"></i></a></td>
+                                        </tr>
+                                    </tbody>
+				            	</table>
+							</td>
+						</tr>
+					</tbody>
+					<tbody class="font-main-kr accordion-item">
+            			<tr>
+                			<td>5</td>
+                			<td class="text-left">Part5. 기획 역량을 보여주기위한 가장 효과적인 매체</td>
+                			<td>포트폴리오</td>
+               				<td>
+               					<a href="javascript:showFile();" class="btn btn-sm btn-gray">다운로드</a>
+               				</td>
+               				<td>
+								<a onclick="showExam(${i.ls_idx})" target="" class="btn btn-sm btn-other">시험응시</a>
+							</td>
+                			<td>
+                				총 <b>3</b> 차시 <button class="accordion-button collapsed btn btn-sm btn-utile margin-10px-left" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive"><i class="ti-menu margin-5px-right"></i> 차시목록</button>
+                			</td>
+						</tr> 
+            			<!-- 펼침목록 -->
+		    			<tr id="collapseFive" class="accordion-collapse collapse table-collapse" data-bs-parent="#accordionExample">
+		    				<td colspan="6" class="bg-light-gray">
+				    			<table class="table table-hover table-bordered table-condensed bg-light-gray">
+				        			<thead>
+				            			<tr class="">
+				                			<th style="width: 70px;">순서</th>
+				                			<th>차시 제목</th>
+				                			<th style="width: 300px;">차시 정보</th>
+				                			<th style="width: 100px;">진도율</th>
+				                			<th style="width: 100px;">학습 일시</th>
+				                			<th style="width: 120px;">학습하기</th>
+				            			</tr>
+				        			</thead>
+				        			<tbody class="font-main-kr">
+                                        <tr>
+                                            <td>1차시</td>
+                                            <td class="text-left">01. 내 역량 분석</td>
+                                            <td>-</td>
+                                            <td>미수강</td>
+                                            <td>-</td>
+                                            <td><a class="btn btn-sm btn-confirm" href="onDetail_popup.do?idx=${j.lr_idx}" target="_blank" data-toggle="tooltip" data-placement="left" title="새 창으로 열립니다.">학습 시작 <i class="ti-export margin-5px-left"></i></a></td>
+                                        </tr>
+                                        <tr>
+                                            <td>2차시</td>
+                                            <td class="text-left">02. 포트폴리오 작성하기</td>
+                                            <td>-</td>
+                                            <td>미수강</td>
+                                            <td>-</td>
+                                            <td><a class="btn btn-sm btn-confirm" href="onDetail_popup.do?idx=${j.lr_idx}" target="_blank" data-toggle="tooltip" data-placement="left" title="새 창으로 열립니다.">학습 시작 <i class="ti-export margin-5px-left"></i></a></td>
+                                        </tr>
+                                        <tr>
+                                            <td>3차시</td>
+                                            <td class="text-left">03. 활용하기</td>
+                                            <td>-</td>
+                                            <td>미수강</td>
+                                            <td>-</td>
+                                            <td><a class="btn btn-sm btn-confirm" href="onDetail_popup.do?idx=${j.lr_idx}" target="_blank" data-toggle="tooltip" data-placement="left" title="새 창으로 열립니다.">학습 시작 <i class="ti-export margin-5px-left"></i></a></td>
+                                        </tr>
+                                    </tbody>
+				            	</table>
+							</td>
+						</tr>
+					</tbody>
+    			</table>
+			</div>
+		</div>
+	</section>
+	</section>
+
+<div id="footer"></div>
+<script type="text/javascript">
+	function showPopup() { 
+		window.open("../../view/lecture/onDetail_popup.html", "examPage", "width=970, height=900, left=800, top=300");
+	}
+
+	
+	function showExam(idx) { 
+		$.ajax({ 
+			url: "onSurvey_popup.do?idx="+idx,
+			success: function(data) {
+				var len = $(data).find(".question").length;
+				if(len == 0) {
+					alert("응시가능한 시험이 없습니다");
+					return ;
+				} else {
+					window.open("onSurvey_popup.do?idx="+idx, "examPage", "width=970, height=900, left=800, top=300"); 
+				}
+			},
+			error:function(data,status,er) {
+				alert("error: "+data+" status: "+status+" er:"+er);
+			}
+		});   
+	}
+
+	function showFile() {
+		  alert("준비중입니다.");
+		  return ;
+	  }
+	
+	function applyLecture(l_idx, m_idx) {
+		$.ajax({
+			type: "POST",      
+			url: "applyLecture.ajax",
+			data: {"l_idx":l_idx, "m_idx":m_idx},
+			success: function(data) {
+				if(data == "등록완료") {
+					alert("수강신청이 완료되었습니다");
+					window.location.reload();
+				} else {
+					alert("오류발생, 관리자에게 문의 바랍니다");
+				}
+			},
+			error:function(data,status,er) {
+				alert("error: "+data+" status: "+status+" er:"+er);
+			}
+		});   
+	}
+</script>
+<!-- javascript libraries -->
+<script type="text/javascript" src="../../assets/js/vendor/jquery.easing.1.3.js"></script>
+<script type="text/javascript" src="../../assets/js/vendor/imagesloaded.pkgd.min.js"></script>
+<!-- slider -->
+<script type="text/javascript" src="../../assets/js/vendor/slick.js"></script>
+<script type="text/javascript" src="../../assets/js/vendor/jquery.bxslider.js"></script>
+<script type="text/javascript" src="../../assets/js/vendor/jquery.simplyscroll.js"></script>
+<!-- Customer JS -->	 
+<script type="text/javascript" src="../../assets/js/common.js"></script>	
+<script type="text/javascript" src="../../assets/js/main.js"></script>
+
+<script type="text/javascript">
+	$(function() {
+		$("#headerCopy").load('../../view/include/headerCopy.html');
+		$("#navCopy").load('../../view/include/navCopy.html');
+		$("#footer").load('../../view/include/footer.html');
+	});
+</script> 
+<!--<script type="text/javascript">
+	$(function(){
+		$('#gnbBtn').addClass('close');
+	});
+</script>-->
+</body>
+	
+
+</html>

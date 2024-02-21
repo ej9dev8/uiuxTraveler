@@ -1,0 +1,163 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%>
+<!DOCTYPE html>
+<html lang="ko">
+<head>  
+	<meta charset="utf-8">
+	<title>${info.sp_si_title} - 공지사항</title>
+	<jsp:include page="../part/meta.jsp"></jsp:include>
+	<link rel="shortcut icon" href="./image/icon/Favicon/favi-cust16(2).ico">
+	<link rel="icon" href="./image/icon/Favicon/favi-cust16(2).ico">
+	<link rel="stylesheet" href="css/font-awesome.min.css" />
+	<link rel="stylesheet" href="css/themify-icons.css" />
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+	<link rel="stylesheet" type="text/css" href="css/reset.css">
+	<link rel="stylesheet" type="text/css" href="css/common.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="css/mr_style.css">
+	<script type="text/javascript" src="js/vendor/jquery.js"></script>	
+</head>
+<body>
+	<%@include file="../part/header.jsp" %> 
+	<%@include file="../part/nav.jsp" %> 
+	<!-- section -->
+	<section class="ford_banner">
+		<div class="banner_wrap">
+			<div class="banner_content">
+				<h3 class="text-center text-white font-main">게시판</h3>
+				<h1 class="text-center text-white font-main">공지사항</h1>
+				<hr>
+				<!-- data 검색-->
+				<form method="post" id="sch_form" action="./fordNotice.do?page=1" class="clearfix">
+					<fieldset class="search-toolbar form-group clearfix">
+						<select class="select" onchange="setVals(this.value)">
+					    	<option value="title">제목</option>
+					    	<option value="content">내용</option>
+					    </select>
+						<div class="input-group">
+							<input type="text" class="search-input" id="sch_input" name="sch_input" value="${sch_input}"/>
+						        <span class="input-group-addon">
+						            <button type="submit" id="sch_btn" class="btn data-sch"><i class="ti-search font-weight-800 main-color-light"></i></button>
+						        </span>
+						</div>
+					</fieldset>
+					<input type="hidden" id="option" name="option" /> 
+					<input type="hidden" id="page" name="page" value="1" />
+					<script type="text/javascript">
+						function setVals(vals){$("#option").val(vals);}
+					</script>						
+				</form>
+				<!--// data 검색 -->	
+			</div>
+		</div>
+	</section>
+	<section class="ford-section-wrap">
+		<div class="container">
+			<div class="row xs-padding-15px-lr">
+				<div class="">
+					<form id="noticeForm" name="noticeForm" method="POST">
+						<table class="table qna-table xs-td-block">
+							<thead class="xs-display-none" style="border-top:2px solid #102B4E;">
+								<tr>
+									<th class="font-main font-weight-600" style="width:80px;">번호</th>
+									<th class="font-main font-weight-600" style="width:auto;">제목</th>
+									<th class="font-main font-weight-600" style="width:200px;">작성일</th>
+									<th class="font-main font-weight-600" style="width:100px;">조회</th>
+								</tr>
+							</thead>
+							<c:if test="${not empty list}">
+							<c:set var="count" value="${paging.totalCount}"/>
+							<c:set var="count_1" value="${count%paging.elemCount eq 0?paging.elemCount:count%paging.elemCount}"/>
+							<c:set var="count_2" value="${paging.elemCount*(paging.totalPage-paging.page)+count_1}"/>
+							<tbody>
+								<c:forEach var="i" items="${list}">		
+								<tr>
+									<td class="xs-display-none">
+										<c:if test="${paging.page eq 1 and paging.totalPage ne 1}">${count}</c:if>
+										<c:if test="${paging.page eq paging.totalPage}">${count_1}</c:if>
+										<c:if test="${paging.page ne 1 and paging.page ne paging.totalPage}">${count_2}</c:if>
+									</td>
+									<td class="text-left td-block font-weight-700">
+										<a href="noticeView.do?num=${i.n_idx}" class="tit text-cut">${i.n_title}</a>
+										<div class="display-none xs-display-block margin-7px-top text-extra-small text-gray">
+											<span>${i.write_date}</span><span>조회수 ${i.n_view}</span>
+										</div>
+									</td>
+									<td class="xs-display-none">${i.insert_date}</td>
+									<td class="xs-display-none">${i.n_view}</td>
+								</tr>
+								<c:set var="count" value="${count-1}"/>
+								<c:set var="count_1" value="${count_1-1}"/>
+								<c:set var="count_2" value="${count_2-1}"/>
+								</c:forEach>
+							</tbody>
+							</c:if>
+						</table>
+					</form>
+					<c:if test="${empty list}">
+					<c:choose>
+						<c:when test="${size eq 0 and search_input == ''}">
+						<div class="data-none">
+							<p>등록된 게시글이 없습니다.</p>
+						</div>
+						</c:when>
+						<c:when test="${size eq 0 and search_input != ''}">
+						<div class="data-none">
+							<p>검색결과가 없습니다.<br/>다른검색어를 입력해주세요.</p>
+						</div>
+						</c:when>
+					</c:choose>
+					</c:if>
+				</div>
+				<div class="pagination">
+					<c:set var="prevPage" value="${paging.absolutePage-paging.blockCount}" />
+					<a href="javascript:location='./fordNotice.do?page=1&option=${param.option}&sch_input='+encodeURIComponent('${param.sch_input}')" class="arrow" id="prevAll"></a> 
+					<c:choose>
+						<c:when test="${prevPage < 0}">
+						<a href="javascript:location='./fordNotice.do?page=1&option=${param.option}&sch_input='+encodeURIComponent('${param.sch_input}')" class="arrow" id="prev"></a>
+						</c:when>
+						<c:otherwise>
+						<a href="javascript:location='./fordNotice.do?page=${prevPage}&option=${param.option}&sch_input='+encodeURIComponent('${param.sch_input}')" class="arrow" id="prevAll"></a>
+						</c:otherwise>
+					</c:choose>
+			
+					<c:forEach var="i" begin="${paging.absolutePage}" end="${paging.endPage}" step="1" >
+						<c:choose>
+							<c:when test="${i eq paging.page}">
+							<a href="javascript:location='./fordNotice.do?page=${i}&option=${param.option}&sch_input='+encodeURIComponent('${param.sch_input}')" class="on">${i}</a>
+							</c:when>
+							<c:otherwise>
+							<a href="javascript:location='./fordNotice.do?page=${i}&option=${param.option}&sch_input='+encodeURIComponent('${param.sch_input}')">${i}</a>
+							</c:otherwise>
+						</c:choose>
+					</c:forEach>  
+					
+					<c:set var="nextPage" value="${paging.absolutePage+paging.blockCount}" />
+					<c:choose>
+						<c:when test="${nextPage > paging.totalPage}">
+						<a href="javascript:location='./fordNotice.do?page=${paging.totalPage}&option=${param.option}&sch_input='+encodeURIComponent('${param.sch_input}')" class="arrow" id="next"></a>
+						</c:when>
+						<c:otherwise>
+						<a href="javascript:location='./fordNotice.do?page=${nextPage}&option=${param.option}&sch_input='+encodeURIComponent('${param.sch_input}')" class="arrow" id="next"></a>
+						</c:otherwise>
+					</c:choose>
+					<a href="javascript:location='./fordNotice.do?page=${paging.totalPage}&option=${param.option}&sch_input='+encodeURIComponent('${param.sch_input}')" class="arrow" id="nextAll"></a>
+				</div>
+			</div>
+		</div>
+	</section>	
+	<!--//section -->
+	<%@include file="../part/footer.jsp" %>
+	<!-- javascript libraries -->
+	<script type="text/javascript" src="js/vendor/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/vendor/jquery.easing.1.3.js"></script>
+	<script type="text/javascript" src="js/vendor/imagesloaded.pkgd.min.js"></script>
+	<!-- slider -->
+	<script type="text/javascript" src="js/vendor/slick.js"></script>
+	<script type="text/javascript" src="js/vendor/jquery.bxslider.js"></script>
+	<!-- Customer JS -->	 
+	<script type="text/javascript" src="js/common.js"></script>	
+</body>
+</html>

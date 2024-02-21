@@ -1,0 +1,21 @@
+#custom .ld-fancy-heading [data-split-text].split-text-applied{
+    margin-bottom: 0;
+}
+
+#custom .ld-fancy-heading [data-split-text].split-text-applied .split-txt{
+    letter-spacing: -1.2px;
+}
+
+.iconbox .iconbox-icon-container img[src$=".svg"]{
+    height: 64px;
+}
+
+.underline{
+text-decoration: underline;
+}
+
+.text-main-bold{color: #a5c413;}
+
+.url-click>li>a{
+    letter-spacing: -.1px;
+}

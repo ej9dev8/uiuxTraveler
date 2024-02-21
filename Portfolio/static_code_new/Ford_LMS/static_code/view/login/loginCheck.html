@@ -1,0 +1,36 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>    
+<%@ page import="java.util.ArrayList" %>
+<%@ page import="mr.DTO.MemberDTO" %>
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<title>Login Check</title>
+	</head>
+	<body>
+		<%String referer=(String)request.getAttribute("referer");%>
+		<c:if test="${not empty loginInfo}">
+		<script>
+			location.href="<%=referer%>";
+		</script>
+		</c:if>
+		<c:if test="${empty loginInfo}">
+			<c:choose>
+				<c:when test="${check eq 'r'}">
+					<script>
+						alert("해당계정은 휴면계정입니다. 고객센터에 문의바랍니다.");
+						history.go(-1);
+					</script>
+				</c:when>
+				<c:otherwise>
+					<script>
+						alert("정보가 일치하지 않습니다. 다시 시도해주십시오.");
+						history.go(-1);
+					</script>
+				</c:otherwise>
+			</c:choose>
+		</c:if>
+	</body>
+</html>

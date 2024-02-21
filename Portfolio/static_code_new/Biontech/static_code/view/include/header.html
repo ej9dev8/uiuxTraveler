@@ -1,0 +1,311 @@
+<script>
+	// header 상품 검색
+	function header_product() {
+		var search = $('#search_product').val();
+		if(search == '') {
+			alert('검색어를 입력해 주세요.');
+			return false;
+		}
+		location.href='productSearch.do?input='+search;
+		return false;
+	}	
+</script>
+<!-- header -->
+<header class="main-header main-header-overlay" data-mobile-nav-trigger-alignment="right" data-react-to-megamenu="true" data-sticky-header="true">
+	<div id="topBanner" style="display: block;">
+	
+		<div class="width-100 text-center position-relative" style="background-color:#004037;">
+			<a href="">
+				<!-- 데스크탑 탑배너 이미지 --> 
+				<div class="topBanner-desktop cover-background sm-display-none" style="background-image:url(./assets/img/banner_img/top-banner-01.png);"></div>
+
+				<!-- 모바일 탑배너 이미지 -->
+				<img src="./assets/img/banner_img/top-mo-banner-01.png" alt="${tapbanner.db_title }" class="topBanner-mobile display-none sm-display-block">
+			</a>
+
+			<div class="chk-styled sm-display-none">
+				<input type="checkbox" id="top_today_close" name="top_today_close" onclick="topCloseToday()">
+				<label for="top_today_close">오늘 다시 안 보기</label>
+			</div>
+			<button type="button" class="btn" onclick="topBannerclose()"><i class="fa fa-close"></i></button>
+		</div>
+	</div>
+	<div class="nav-topbar-wrap">
+		<div class="container">
+			<div class="row row mainbar-row">
+				<div class="col-auto">
+					<div class="navbar-header">
+					<a class="navbar-brand no-padding-lr sm-margin-auto" href="../../../static_code/index.html">
+						<span class="navbar-brand-inner">
+							<img src="https://cdn-pro-web-151-224.cdn-nhncommerce.com/biontech_godomall_com/data/skin/front/mo_designart/img/banner/1bb87d41d15fe27b500a4bfcde01bb0e_74309.png">
+						</span>
+					</a>
+					<button type="button" class="navbar-toggle collapsed nav-trigger style-mobile" data-toggle="collapse" data-target="#main-header-collapse" aria-expanded="false" data-changeclassnames='{ "html": "mobile-nav-activated overflow-hidden" }'>
+						<span class="sr-only">Toggle navigation</span>
+						<span class="bars">
+							<span class="bar"></span>
+							<span class="bar"></span>
+							<span class="bar"></span>
+						</span>
+					</button>
+				   </div>
+			</div>
+			<div class="col text-right">
+				<div class="header-module head-sub-mdu">
+					<div class="header-sch-form ld-sf--input-solid ld-sf--circle ld-sf--border-thin ld-sf--button-inline">
+						<form name="mc-embedded-subscribe-form" id="ld_subscribe_form" class="ld_sf_form" onSubmit="return header_product();">
+							<p class="ld_sf_paragraph pr-2">
+								<input type="text" id="search_product" class="ld_sf_text"/>
+							</p>
+							<button type="submit" class="bg-transparent padding-10px-right">
+								<span class="search-btn-i fa fa-search"></span>
+								<span class="ld-sf-spinner">
+									<span>Sending </span>
+								</span>
+							</button>
+						</form>
+						<div class="ld_sf_response"></div>
+					</div>
+				</div>
+					<div class="header-module head-sub-mdu">
+						<a href="../../../static_code/view/member/loginForm.html">
+							<span class="btn-txt head-sub-text">로그인</span>
+						</a>
+					</div>
+					<div class="header-module head-sub-mdu">
+						<a href="../../../static_code/view/member/joinForm.html">
+							<span class="btn-txt head-sub-text">회원가입</span>
+						</a>
+					</div>
+				
+
+				<div class="header-module head-sub-mdu">
+					<a href="../../../static_code/view/order/barsket.html">
+						<span class="btn-txt head-sub-text">장바구니</span>
+					</a>
+				</div>
+			</div>
+			</div>
+		</div>
+	</div>
+	<div class="mainbar-wrap">
+		<span class="megamenu-hover-bg"></span>
+		<div class="container mainbar-container no-padding">
+			<div class="mainbar">
+				<div class="row mainbar-row align-items-lg-stretch no-margin">
+					<div class="col-auto no-padding">
+						<div class="collapse navbar-collapse" id="main-header-collapse">
+							<ul id="primary-nav" class="main-nav nav align-items-lg-stretch justify-content-lg-start" data-submenu-options='{ "toggleType":"fade", "handler":"mouse-in-out" }'>
+								<li class="menu-item-has-children megamenu megamenu-fullwidth">
+									<a class="no-padding-lr" href="#">
+										<span class="link-icon"></span>
+										<span class="link-txt">
+											<span class="link-ext"></span>
+											<span class="ti-menu"></span>
+											<span class="txt">
+												<i class="fa fa-bars mr-3"></i>전체보기
+											</span>
+										</span>
+									</a>
+									<ul class="nav-item-children md-no-padding">
+										<li>
+											<div class="container megamenu-container md-no-padding">
+												<div class="vc_row row megamenu-inner-row bg-white">
+													<div class="container ld-container">
+														<!-- ===== 데스크탑 화면 표시 카테고리 ===== -->
+														<div class="row ld-row md-display-none">
+															<div class="megamenu-column col-md-4">
+																<h3 class="megamenu-heading"><a class="text-main" href="../view/product/productList.html">제품 카테고리</a></h3>
+																<ul class="lqd-custom-menu reset-ul">
+																		<li><a href="../view/product/productList.html">이온수기</a></li>
+																		<li><a href="../view/product/productList.html">정품필터</a></li>
+																		<li><a href="../view/product/productList.html">전해수소수기</a></li>
+																		<li><a href="../view/product/productList.html">전기레인지</a></li>
+																		<li><a href="../view/product/productList.html">공기청정기</a></li>
+																		<li><a href="../view/product/productList.html">비데</a></li>
+																		<li><a href="../view/product/productList.html">소모품</a></li>
+																</ul>
+															</div><!-- /.megamenu-column -->
+																
+														
+																
+															<div class="megamenu-column col-md-4">
+																<h3 class="megamenu-heading">고객센터</h3>
+																<ul class="lqd-custom-menu reset-ul">
+																	<li><a href="noticeList.do">공지사항</a></li>
+																	<li><a href="rentalOrder.do">렌탈문의</a></li>
+																	<li><a href="qnaList.do">1:1문의</a></li>
+																	<li><a href="faqList.do">자주하는질문</a></li>
+																	<li><a href="eventList.do">이벤트</a></li>
+																	<li><a href="news.do">뉴스</a></li>
+																	<li><a href="reviewList.do">REVIEW</a></li>
+																	<li><a href="serviceCenterList.do">서비스센터</a></li>
+																</ul>
+															</div><!-- /.megamenu-column -->
+																
+															<div class="megamenu-column col-md-4">
+																<h3 class="megamenu-heading">회사소개</h3>
+																<ul class="lqd-custom-menu reset-ul">
+																	<li><a href="basket.do">브랜드 스토리</a></li>
+																	<li><a href="">회사연혁</a></li>
+																</ul>
+															</div><!-- /.megamenu-column -->
+																
+															<div class="megamenu-column col-md-4">
+																<h3 class="megamenu-heading">커뮤니티</h3>
+																<ul class="lqd-custom-menu reset-ul">
+																	<li><a href="${info.si_sns2 }" target="_blank">유튜브</a></li>
+																	<li><a href="${info.si_sns3 }" target="_blank">인스타그램</a></li>
+																	<li><a href="${info.si_sns4 }" target="_blank">블로그</a></li>
+																</ul>
+															</div>								
+														</div>
+														<!-- ===== // 데스크탑 화면 표시 카테고리 ===== -->
+														
+														<!-- ===== 모바일 화면 표시 카테고리 ===== -->
+
+														<div class="row ld-row display-none md-display-block">
+															<div class="head-mega-member">
+																<div class="row">
+																	<c:if test="${empty login }">
+																		<div class="col-xs-5 no-padding margin-15px-right float-none margin-auto">
+																			<button class="member-btn login-btn" onclick="location.href='login_form.do'">로그인</button>
+																		</div>
+																		<div class="col-xs-5 no-padding float-none margin-auto">
+																			<button class="member-btn join-btn" onclick="location.href='join_form.do'">회원가입</button>
+																		</div>
+																   </c:if>
+																	<c:if test="${not empty login }">
+																		<div class="col-xs-5 no-padding margin-15px-right float-none margin-auto">
+																			<button class="member-btn login-btn" onclick="location.href='logout.do'">로그아웃</button>
+																		</div>
+																		<div class="col-xs-5 no-padding float-none margin-auto">
+																			<button class="member-btn join-btn" onclick="location.href='orderList.do'">마이페이지</button>
+																		</div>
+																	</c:if>
+			
+																</div>
+															</div>
+															<div class="head-mega-shop">
+																<!-- <div class="shop-btn width-50 float-left"><button><span class="ti-truck"> </span> 주문배송조회</button></div> -->
+																<div class="shop-btn width-50 float-left"><button onclick="location.href='basket.do'"><span class="ti-bag"> </span> 장바구니</button></div>
+															</div>
+															<div class="head-mega-category">
+																<dl class="head-category-menu">
+																	  <dt><a>제품 카테고리</a><span id="headPlit" class="ti-angle-down"></span></dt>
+																	  <dd>
+																		  <p><a href="productList.do">전체보기</a></p>
+																		  <c:forEach items="${main_sort }" var="i">
+																			<p><a href="productList.do?main=${i.constant_p_category1_idx }">${i.constant_p_category1_name }</a></p>
+																		</c:forEach>
+																	</dd>
+																</dl>
+																<dl class="head-category-menu">
+																	  <dt><a>고객센터</a><span id="headPlit" class="ti-angle-down"></span></dt>
+																	  <dd>
+																		  <!-- <p><a href="">회사소개</a></p> -->
+																		  <p><a href="noticeList.do">공지사항</a></p>
+																		  <!-- <p><a href="">렌탈문의</a></p> -->
+																		  <p><a href="qnaList.do">1:1문의</a></p>
+																		  <p><a href="faqList.do">자주하는질문</a></p>
+																		  <p><a href="eventList.do">이벤트</a></p>
+																		  <p><a href="news.do">뉴스</a></p>
+																		  <p><a href="reviewList.do">REVIEW</a></p>
+																	</dd>
+																</dl>
+																<dl class="head-category-menu">
+																	  <dt><a>마이페이지</a><span id="headPlit" class="ti-angle-down"></span></dt>
+																	  <dd>
+																		  <p><a href="basket.do">장바구니</a></p>
+																		  <!-- <p><a href="">주문배송</a></p> -->
+																	</dd>
+																</dl>
+																<dl class="head-category-menu">
+																	  <dt><a>커뮤니티</a><span id="headPlit" class="ti-angle-down"></span></dt>
+																	  <dd>
+																		  <%-- <p><a href="${info.si_sns }" target="_blank">페이스북</a></p>
+																		  <p><a href="${info.si_sns2 }" target="_blank">유튜브</a></p>
+																		  <p><a href="${info.si_sns3 }" target="_blank">인스타그램</a></p> --%>
+																		  <p><a href="${info.si_sns4 }" target="_blank">블로그</a></p>
+																	</dd>
+																</dl>
+															</div>
+																					
+														</div>
+														<!-- ===== // 모바일 화면 표시 카테고리 ===== -->
+														
+													</div><!-- /.container ld-container -->
+												</div><!-- /.vc_row -->
+											</div><!-- /.megamenu-container -->
+										</li>
+									</ul>
+								</li>
+							</ul><!-- /#primary-nav  -->
+						</div><!-- /#main-header-collapse -->
+					</div>
+					
+					
+					<div class="col">
+						<div class="collapse navbar-collapse padding-15px-left" id="main-header-collapse">
+							<ul id="primary-nav" class="main-nav nav align-items-lg-stretch justify-content-lg-center width-100" data-submenu-options='{ "toggleType":"fade", "handler":"mouse-in-out" }'>
+								<li><a href="../view/product/productList.html"><span class="link-txt">이온수기</span></a></li>
+								<li><a href="productList.do?main=${i.constant_p_category1_idx }"><span class="link-txt">필터교체영상</span></a></li>
+								<li><a href="productList.do?main=${i.constant_p_category1_idx }"><span class="link-txt">매뉴얼 & 다운로드</span></a></li>
+								<li><a href="productList.do?main=${i.constant_p_category1_idx }"><span class="link-txt">회사소개</span></a></li>
+							</ul>
+						
+						</div>
+						
+					</div>
+
+					<div class="col-auto text-right">						
+						<div class="header-module">
+							<a href="eventList.do">
+								<span>
+									<span class="btn-txt text-dark-red btn-side-border">이벤트</span>
+								</span>
+							</a>
+						</div><!-- /.header-module -->
+							
+						<div class="header-module">
+							<a href="news.do">
+								<span>
+									<span class="btn-txt btn-side-border">뉴스</span>
+								</span>
+							</a>
+						</div><!-- /.header-module -->
+						
+					</div><!-- /.col -->
+					
+				</div><!-- /.mainbar-row -->
+			</div><!-- /.mainbar -->
+		</div><!-- /.mainbar-container -->
+	</div><!-- /.mainbar-wrap -->	
+</header><!-- /.main-header -->
+<!--// header -->
+
+<script type="text/javascript">
+$('.head-category-menu dt').on('click', function () {
+	 $("#headPlit", this).toggleClass("ti-angle-down ti-angle-up");
+	if ($(this).hasClass('on')) {
+		slideUp();
+	} else {
+		slideUp();
+		$(this).addClass('on').next().slideDown();
+	}
+	function slideUp() {
+		$('.head-category-menu dt').removeClass('on').next().slideUp();
+	};
+})
+
+
+// 탑 배너 쿠기 점검
+cookiedata = document.cookie;
+if(cookiedata.indexOf("close_banner=Y")<0){
+	$("#topBanner").css("display", "block");
+}else{
+	$("#topBanner").css("display", "none");
+}
+
+
+</script>

@@ -1,0 +1,290 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<!DOCTYPE html>
+<html lang="ko">
+<head>  
+	<meta charset="utf-8" />
+	<title>${info.sp_si_title} - 아이디/비밀번호 찾기</title>
+	<jsp:include page="../part/meta.jsp"></jsp:include>
+	<link rel="shortcut icon" href="./image/icon/Favicon/favi-cust16(2).ico">
+	<link rel="icon" href="./image/icon/Favicon/favi-cust16(2).ico">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+	<link rel="stylesheet" type="text/css" href="css/reset.css">
+	<link rel="stylesheet" type="text/css" href="css/common.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="css/mr_style.css">
+	<script type="text/javascript" src="js/vendor/jquery.js"></script>
+</head>
+<body>
+	<section class="padding-50px-tb">
+		<div class="container">
+			<div class="row padding-25px-lr">
+				<div class="text-left page-title-extra-small page-title-border clearfix">
+					<h1 class="text-dark-gray">아이디 / 비밀번호 찾기</h1>
+				</div>
+				<div class="padding-25px-top">
+					<ul class="tab-nav tab-nav2 clearfix">
+						<li class="active"><a href="#idSearch" data-toggle="tab">아이디 찾기</a></li>
+						<li><a href="#pwSearch" data-toggle="tab">비밀번호 찾기</a></li>
+					</ul>
+					<form name="find_form" method="POST"  class="tab-content">
+						<input type="hidden" id="find_id" name="sp_c_id" />
+						<input type="hidden" id="find_pw" name="sp_c_pw" />
+						<input type="hidden" id="find_name" name="sp_c_name" />
+						<input type="hidden" id="find_phone" name="sp_c_phone" />
+						<input type="hidden" id="find_email" name="sp_c_email" />
+						<!--아이디 찾기-->
+						<fieldset class="width-100 tab-pane fade in active" id="idSearch">
+							<div class="radio-styled text-left">
+								<div class="display-inline-block margin-10px-right">
+									<input type="radio" id="id_hp_sch" name="id_sch_type" checked="checked" onclick="searchType('id_sch_type',this)" />
+									<label for="id_hp_sch">휴대폰 번호로 찾기</label>
+								</div>
+								<div class="display-inline-block">
+									<input type="radio" id="id_email_sch" name="id_sch_type" onclick="searchType('id_sch_type',this)" />
+									<label for="id_email_sch">이메일로 찾기</label>
+								</div>
+							</div>
+							<div class="form-group-area margin-20px-top">
+								<div class="form-group">
+									<input type="text" id="id_sch_member_name" class="form-control onlyHangul" alt="0" placeholder="이름" />
+								</div>
+								<div class="form-group id_hp_sch">
+									<input type="tel" id="id_sch_member_hp" class="form-control" alt="0" placeholder="휴대폰 번호 ex)010-0000-0000" onkeyup="autoHipenTel(this)" maxlength="13" />
+								</div>
+								<div class="form-group id_email_sch" style="display:none">
+									<input type="email" id="id_sch_member_email" class="form-control" alt="0" placeholder="이메일 주소" />
+								</div>
+							</div>
+							<div class="margin-30px-top text-center">
+								<button type="button" onclick="id_Search()" class="btn btn-submit width-100 height-45px">아이디 찾기</button>
+							</div>
+						</fieldset>
+						<!--//아이디 찾기-->
+						<!--비밀번호 찾기-->
+						<fieldset class="width-100 tab-pane fade in" id="pwSearch">
+							<div class="radio-styled text-left">
+								<div class="display-inline-block margin-10px-right">
+									<input type="radio" id="pw_hp_sch" name="pw_sch_type" checked="checked" onclick="searchType('pw_sch_type',this)" />
+									<label for="pw_hp_sch">휴대폰 번호로 찾기</label>
+								</div>
+								<div class="display-inline-block">
+									<input type="radio" id="pw_email_sch" name="pw_sch_type" onclick="searchType('pw_sch_type',this)" />
+									<label for="pw_email_sch">이메일로 찾기</label>
+								</div>
+							</div>
+							<div class="form-group-area margin-20px-top">
+								<div class="form-group">
+									<input type="text" id="pass_sch_member_name" class="form-control onlyHangul" alt="0" placeholder="이름" />
+								</div>
+								<div class="form-group">
+									<input type="text" id="pass_sch_member_id" class="form-control notHangul" alt="0" placeholder="아이디" />
+								</div>
+								<div class="form-group pw_hp_sch">
+									<input type="tel" id="pass_sch_member_hp" class="form-control" alt="0" placeholder="휴대폰 번호 ex)010-0000-0000" onkeyup="autoHipenTel(this)" maxlength="13" />
+								</div>
+								<div class="form-group pw_email_sch" style="display:none">
+									<input type="email" id="pass_sch_member_email" class="form-control" alt="0" placeholder="이메일 주소" />
+								</div>
+							</div>
+							<div class="margin-30px-top text-center">
+								<button type="button" onclick="pw_Search()" class="btn btn-submit width-100 height-45px">비밀번호 찾기</button>
+							</div>
+						</fieldset>
+						<!--//비밀번호 찾기-->
+					</form>
+					
+					<!--Result-->
+					<div id="id_result" style="display:none">
+						<div class="complete-box">
+							<h5><b id="member_name"></b> 님의 아이디는 <b id="member_id"></b> 입니다.</h5>
+						</div>
+						<div class="margin-30px-top text-center">
+							<a href="javascript:pwCheck()" class="btn btn-other width-49 line-height-45 no-padding">비밀번호찾기</a>
+							<a href="javascript:loginMove()" class="btn btn-submit width-49 line-height-45 no-padding">로그인</a>
+						</div>
+					</div>
+					<div id="pw_result" style="display:none">
+						<div class="complete-box">
+							<h5>등록된 이메일로 임시 비밀번호를 발송하였습니다.<br/><b id="member_email"></b></h5>
+						</div>
+						<div class="margin-30px-top text-center">
+							<a href="javascript:loginMove()" class="btn btn-submit width-100 line-height-45 no-padding">로그인</a>
+						</div>
+					</div>
+					<!--//Result-->
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- javascript libraries -->
+	<script type="text/javascript" src="js/vendor/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/vendor/jquery.easing.1.3.js"></script>
+	<!-- slider -->
+	<script type="text/javascript" src="js/vendor/jquery.bxslider.js"></script>
+	<!-- Customer JS -->	 
+	<script type="text/javascript" src="js/common.js"></script>
+	<script type="text/javascript">	
+		//타입선택
+		function searchType(type, obj){
+			if(type == "id_sch_type"){ //아이디 찾기
+				var kind = $(obj).attr('id');
+			
+				if(kind == "id_hp_sch"){
+					$('.id_hp_sch').show();
+					$('.id_email_sch').hide();
+				}else if(kind == "id_email_sch"){
+					$('.id_hp_sch').hide();
+					$('.id_email_sch').show();
+				}
+			}
+			
+			if(type == "pw_sch_type"){//비밀번호 찾기
+				var kind = $(obj).attr('id');
+			
+				if(kind == "pw_hp_sch"){
+					$('.pw_hp_sch').show();
+					$('.pw_email_sch').hide();
+				}else if(kind == "pw_email_sch"){
+					$('.pw_hp_sch').hide();
+					$('.pw_email_sch').show();
+				}
+			}
+		}
+		
+		//아이디 찾기
+		function id_Search(){
+			var id_sch_member_name = $("#id_sch_member_name").val();
+			var id_sch_member_hp = $("#id_sch_member_hp").val();
+			var id_sch_member_email = $("#id_sch_member_email").val();
+			if(id_sch_member_name==''){
+				alert("이름을 입력해 주십시오.");
+				$("#id_sch_member_name").focus();
+				return false;
+			}
+			$("#find_name").val(id_sch_member_name);
+			if($('#id_hp_sch').is(':checked')){//핸드폰번호
+				if(id_sch_member_hp==''){
+					alert("휴대폰 번호를 입력해 주십시오.");
+					$("#id_sch_member_hp").focus();
+					return false;
+				}
+				if (id_sch_member_hp.indexOf("-") < 0){
+					alert("휴대폰 번호는 '000-0000-0000' 형식에 맞추어 입력해주십시오.");
+					return false;
+				}
+				$("#find_phone").val(id_sch_member_hp);
+			}
+			if($('#id_email_sch').is(':checked')){//이메일 
+				if(id_sch_member_email==''){
+					alert("이메일 주소를 입력해 주십시오.");
+					$("#id_sch_member_email").focus();
+					return false;
+				}
+				if (id_sch_member_email.indexOf("@") < 0){
+					alert("이메일 주소를 정확히 입력해주십시오.");
+					return false;
+				}
+				$("#find_email").val(id_sch_member_email);
+			}
+			var param=getParams('find_form');
+			var setting={
+				url:"./id_search.do",
+				data: param
+			};
+			$.ajax(setting)
+			.done(function(data){
+				if(data==''){
+					alert("입력하신 정보로 가입된 아이디가 존재하지 않습니다.");
+				}
+				if(data!=''){
+					$("#id_result").show();
+					$('.tab-content').hide();
+					$("#member_name").text($("#find_name").val());
+					$("#member_id").text(data);
+				}
+			});
+		}
+		
+		//비밀번호 찾기
+		function pw_Search(){
+			var pass_sch_member_name = $("#pass_sch_member_name").val();
+			var pass_sch_member_id = $("#pass_sch_member_id").val();
+			var pass_sch_member_hp = $("#pass_sch_member_hp").val();
+			var pass_sch_member_email = $("#pass_sch_member_email").val();
+			if(pass_sch_member_name==''){
+				alert("이름을 입력해 주십시오.");
+				$("#pass_sch_member_name").focus();
+				return false;
+			}
+			if(pass_sch_member_id==''){
+				alert("아이디를 입력해 주십시오.");
+				$("#pass_sch_member_id").focus();
+				return false;
+			}
+			$("#find_name").val(pass_sch_member_name);
+			$("#find_id").val(pass_sch_member_id);
+			
+			if($('#pw_hp_sch').is(':checked')){ //핸드폰번호
+				if(pass_sch_member_hp==''){
+					alert("휴대폰 번호를 입력해 주십시오.");
+					$("#pass_sch_member_hp").focus();
+					return false;
+				}
+				if (pass_sch_member_hp.indexOf("-") < 0){
+					alert("휴대폰 번호는 '000-0000-0000' 형식에 맞추어 입력해주십시오.");
+					return false;
+				}
+				$("#find_phone").val(pass_sch_member_hp);
+			}
+			if($('#pw_email_sch').is(':checked')){ //이메일 
+				if(pass_sch_member_email==''){
+					alert("이메일 주소를 입력해 주십시오.");
+					$("#pass_sch_member_email").focus();
+					return false;
+				}
+				if (pass_sch_member_email.indexOf("@") < 0){
+					alert("이메일 주소는 정확히 입력해주십시오.");
+					return false;
+				}
+				$("#find_email").val(pass_sch_member_email);
+			}
+			
+			var param=getParams('find_form');
+			var setting={
+				url:"./pw_search.do",
+				data: param
+			};
+			$.ajax(setting)
+			.done(function(data){
+				if(data==''){
+					alert("입력하신 정보로 가입된 계정이 존재하지 않습니다.");
+				}
+				if(data!=''){
+					$("#pw_result").show();
+					$('.tab-content').hide();
+					$("#member_email").text(data);
+				}
+			});
+		}
+		//로그인폼 이동
+		function loginMove(){
+			opener.loginForm.login_id.focus();
+			window.close();
+		}
+		//비밀번호찾기 탭 이동
+		function pwCheck(){
+			$("#id_result").hide();
+			$('.tab-content').show();	
+			
+			$('a[href="#pwSearch"]').parent('li').addClass('active');
+			$('a[href="#idSearch"]').parent('li').removeClass('active');
+			
+			$('#pwSearch').addClass('active');
+			$('#idSearch').removeClass('active');
+		}
+	</script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<!DOCTYPE html>
+<html lang="ko">
+<head>  
+	<meta charset="utf-8" />
+	<title>${info.sp_si_title} - 이용약관</title>
+	<jsp:include page="../part/meta.jsp"></jsp:include>
+	<link rel="shortcut icon" href="./image/icon/Favicon/favi-cust16(2).ico">
+	<link rel="icon" href="./image/icon/Favicon/favi-cust16(2).ico">
+	<link rel="stylesheet" href="css/themify-icons.css" />
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+	<link rel="stylesheet" type="text/css" href="css/reset.css">
+	<link rel="stylesheet" type="text/css" href="css/common.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="css/mr_style.css">
+	<script type="text/javascript" src="js/vendor/jquery.js"></script>
+</head>
+<body>
+	<section class="no-padding-tb">
+		<div class="container">
+			<div class="row">
+				<div class="padding-20px-all bg-red page-title-extra-small position-relative">
+					<h1 class="text-white">이용약관</h1>
+					<button type="button" onclick="window.close()" class="btn popup-close text-white"><i class="ti-close"></i></button>
+				</div>
+				<div class="padding-20px-all terms-box">
+					<c:if test="${not empty terms}">
+					${terms.sp_ut_use_term}
+					</c:if>
+				</div>
+			</div>
+		</div>
+	</section>
+</body>
+</html>
