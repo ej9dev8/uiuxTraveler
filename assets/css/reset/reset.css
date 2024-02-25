@@ -19,3 +19,5 @@ text-decoration: underline;
 .url-click>li>a{
     letter-spacing: -.1px;
 }
+
+.height-auto{height: auto !important;}
